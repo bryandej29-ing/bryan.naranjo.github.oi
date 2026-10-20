@@ -4,36 +4,36 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Portfolio of Bryan Naranjo Hernández, civil engineer: road design, detours, earthworks, GIS/BIM and complete streets.">
+<meta name="description" content="Portfolio of Bryan Naranjo Hernández, civil engineer: road design, detours, construction accesses, earthworks, GIS/BIM and complete streets.">
 <title>Bryan Naranjo · Portfolio</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23372D2D'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EBN%3C/text%3E%3Crect x='0' y='56' width='64' height='8' fill='%23B7342D'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%232A2724'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EBN%3C/text%3E%3Crect x='0' y='56' width='64' height='8' fill='%234F5D4A'/%3E%3C/svg%3E">
 <style>[hidden]{display:none!important}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
 <style>
-/* Layout: Sherwood-style pages. Cover = dark fact-box panel beside a mosaic of the six projects;
+/* Layout: clean warm-neutral portfolio (olive accent). Cover = dark fact-box panel beside a mosaic of the six projects;
    each project = full-bleed image band with uppercase title, red tags, 2/3 narrative + 1/3 dark facts,
    then a captioned drawing gallery. Single light look on purpose; every color set explicitly. */
 :root{
-  --bg:#FFFFFF;
-  --panel:#F3F1F0;
-  --ink:#372D2D;
-  --text:#241E1E;
-  --muted:#776D6C;
-  --grey:#9B9B9B;
-  --rule:#D9D3D2;
-  --red:#B7342D;
-  --red-deep:#932923;
-  --red-tint:#F5E4E2;
+  --bg:#FAF9F7;
+  --panel:#F1EEE8;
+  --ink:#2A2724;
+  --text:#2A2724;
+  --muted:#6E6760;
+  --grey:#ADA69D;
+  --rule:#E3DED6;
+  --red:#4F5D4A;
+  --red-deep:#3B4637;
+  --red-tint:#E6EAE1;
   --idea-tint:#ECEFF0;
   --idea-ink:#2F4A56;
   --on-dark:#FFFFFF;
-  --on-dark-soft:#D9D0CF;
-  --chart-2:#8C8180;
-  --chart-3:#C8BFBE;
-  --chart-4:#E2B1AC;
-  --font:"Montserrat","Helvetica Neue",Arial,sans-serif;
+  --on-dark-soft:#D6D1C9;
+  --chart-2:#8E877E;
+  --chart-3:#C9C3BA;
+  --chart-4:#B9C2B0;
+  --font:"Inter","Helvetica Neue",Arial,sans-serif;
   --w:1180px;
   --gutter:clamp(16px,4vw,40px);
   color-scheme:light;
@@ -53,7 +53,7 @@ p{margin:0}
 
 /* ---------- notes for Bryan (remove before sending) ---------- */
 .todo,.idea{display:inline;border-radius:3px;padding:1px 6px;font-size:.86em;font-weight:500;line-height:1.9;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-.todo{background:var(--red-tint);color:var(--red-deep);border:1px dashed var(--red)}
+.todo{background:#F6E3DF;color:#8E2B24;border:1px dashed #B7342D}
 .todo::before{content:"PENDIENTE · ";font-weight:700;letter-spacing:.06em}
 .idea{background:var(--idea-tint);color:var(--idea-ink);border:1px dashed var(--idea-ink)}
 .idea::before{content:"IDEA PARA SUMAR VALOR · ";font-weight:700;letter-spacing:.06em}
@@ -64,59 +64,59 @@ body.hide-notes .todo,body.hide-notes .idea,body.hide-notes .note-block{display:
 .notes-toggle:hover{background:var(--red)}
 
 /* ---------- cover: dark panel + project mosaic ---------- */
-.cover{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);background:var(--ink);color:var(--on-dark);min-height:clamp(560px,52vw,680px)}
+.cover{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);background:var(--panel);color:var(--text);min-height:clamp(560px,52vw,680px)}
 @media (max-width:900px){.cover{grid-template-columns:minmax(0,1fr)}}
 .cover-panel{display:flex;flex-direction:column;justify-content:space-between;gap:48px;padding:26px clamp(18px,3.4vw,44px) clamp(32px,4vw,52px)}
 .topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
 .mark{display:flex;flex-direction:column;line-height:1.15}
 .mark b{font-size:22px;letter-spacing:.06em;font-weight:700}
-.mark span{font-size:11px;letter-spacing:.32em;font-weight:500;color:var(--on-dark-soft);margin-top:4px}
+.mark span{font-size:11px;letter-spacing:.28em;font-weight:500;color:var(--muted);margin-top:4px}
 .nav{display:flex;gap:18px;flex-wrap:wrap;padding-top:6px}
-.nav a{color:var(--on-dark);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.nav a{color:var(--text);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
 .cover-body{display:grid;gap:18px;justify-items:start}
-.btn-tag{display:inline-block;background:var(--red);color:var(--on-dark);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:13px 20px}
+.btn-tag{display:inline-block;background:var(--red);color:var(--on-dark);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:13px 20px}
 .btn-tag:hover{text-decoration:none;background:var(--red-deep)}
-.cover h1{font-size:clamp(28px,3.5vw,44px);line-height:1.14;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
-.cover .lede{max-width:46ch;font-size:clamp(15px,1.4vw,17px);font-weight:300;color:#F2ECEB}
-.cover-index{list-style:none;margin:6px 0 0;padding:14px 0 0;border-top:1px solid rgba(255,255,255,.2);display:grid;gap:6px;width:100%;font-size:13px}
-.cover-index a{display:grid;grid-template-columns:34px 1fr;color:var(--on-dark-soft)}
+.cover h1{font-size:clamp(30px,3.6vw,46px);line-height:1.12;letter-spacing:-.015em;font-weight:600}
+.cover .lede{max-width:46ch;font-size:clamp(15px,1.4vw,17px);font-weight:400;color:var(--muted)}
+.cover-index{list-style:none;margin:6px 0 0;padding:14px 0 0;border-top:1px solid var(--rule);display:grid;gap:6px;width:100%;font-size:13px}
+.cover-index a{display:grid;grid-template-columns:34px 1fr;color:var(--muted)}
 .cover-index a b{color:var(--red);font-weight:700;letter-spacing:.06em}
-.cover-index a:hover{color:var(--on-dark);text-decoration:none}
+.cover-index a:hover{color:var(--text);text-decoration:none}
 
-.mosaic{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:1fr 1fr .9fr;gap:3px;background:var(--ink);min-height:420px}
+.mosaic{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:1fr 1fr .9fr;gap:4px;background:var(--panel);min-height:420px}
 .tile{position:relative;overflow:hidden;display:block;background:#4A3E3E;color:var(--on-dark)}
 .tile img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
 .tile:hover img{transform:scale(1.05)}
 .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,14,14,0) 55%,rgba(20,14,14,.78) 100%)}
 .tile span{position:absolute;left:12px;bottom:10px;z-index:1;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
-.tile span b{color:#FFB8B0;margin-right:6px}
+.tile span b{color:#E3E8DC;margin-right:6px}
 .tile:hover{text-decoration:none}
 .t-a{grid-column:1/3;grid-row:1/3}
 .t-f{grid-column:3/5;grid-row:1/2}
 .t-b{grid-column:3/4;grid-row:2/3}
 .t-e{grid-column:4/5;grid-row:2/3}
 .t-c{grid-column:1/3;grid-row:3/4}
-.t-d{grid-column:3/5;grid-row:3/4}
+.t-g{grid-column:3/5;grid-row:3/4}
 @media (max-width:560px){.mosaic{min-height:360px}.tile span{font-size:10px;left:8px;bottom:6px}}
 
-.catbar{background:var(--panel)}
+.catbar{background:var(--bg);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 .catbar .wrap{display:flex;flex-wrap:wrap;gap:6px 26px;align-items:center;justify-content:space-between;padding-block:16px}
 .catbar .caps{color:var(--red);font-size:13px}
 .catbar .meta{font-size:13px;color:var(--muted)}
 
 /* ---------- generic section ---------- */
 section{padding-block:clamp(48px,7vw,84px)}
-.sec-title{font-size:clamp(20px,2.4vw,26px);letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--text);margin-bottom:28px}
+.sec-title{font-size:clamp(22px,2.6vw,30px);letter-spacing:-.01em;font-weight:600;color:var(--text);margin-bottom:28px}
 .grid-3{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:clamp(24px,4vw,48px);align-items:start}
 @media (max-width:860px){.grid-3{grid-template-columns:minmax(0,1fr)}}
 .prose{display:grid;gap:16px;max-width:66ch;color:var(--ink)}
 .prose .lead{font-size:clamp(17px,1.9vw,20px);font-weight:300;line-height:1.6;color:var(--text)}
 
-.facts{background:var(--ink);color:var(--on-dark);padding:26px 26px 22px}
+.facts{background:#FFFFFF;color:var(--text);border:1px solid var(--rule);padding:24px 24px 20px}
 .facts dl{margin:0;display:grid;gap:16px}
-.facts dt{font-size:12.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
-.facts dd{margin:4px 0 0;font-weight:300;font-size:15px;line-height:1.55;color:#F4EFEE}
-.facts dd small{display:block;color:var(--on-dark-soft);font-size:13px}
+.facts dt{font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+.facts dd{margin:4px 0 0;font-weight:400;font-size:15px;line-height:1.55;color:var(--text)}
+.facts dd small{display:block;color:var(--muted);font-size:13px}
 
 /* role match */
 .match-scroll{overflow-x:auto;border-top:1px solid var(--grey)}
@@ -131,7 +131,7 @@ table.match{border-collapse:collapse;width:100%;min-width:760px;font-size:14px}
 .legend{display:flex;gap:22px;flex-wrap:wrap;margin-top:14px;font-size:13px;color:var(--muted);align-items:center}
 .legend span{display:inline-flex;gap:8px;align-items:center}
 
-/* featured cards: 5 projects -> first card wide */
+/* featured cards: 6 projects in rows of three */
 .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 @media (max-width:980px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.cards{grid-template-columns:minmax(0,1fr)}}
@@ -146,11 +146,11 @@ table.match{border-collapse:collapse;width:100%;min-width:760px;font-size:14px}
 
 /* ---------- project ---------- */
 .project{padding-block:0 clamp(56px,8vw,96px);border-top:1px solid var(--rule)}
-.p-hero{position:relative;min-height:clamp(240px,34vw,380px);display:flex;align-items:flex-end;background:var(--ink) center/cover no-repeat;color:var(--on-dark)}
-.p-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,14,14,.15) 30%,rgba(20,14,14,.75) 100%)}
+.p-hero{position:relative;min-height:clamp(200px,26vw,300px);display:flex;align-items:flex-end;background:var(--ink) center/cover no-repeat;color:var(--on-dark)}
+.p-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,27,24,0) 35%,rgba(30,27,24,.62) 100%)}
 .p-hero .wrap{position:relative;width:100%;padding-block:28px}
 .p-hero .idx{font-size:12px;letter-spacing:.2em;font-weight:600;color:var(--on-dark-soft)}
-.p-hero h2{font-size:clamp(24px,3.8vw,42px);letter-spacing:.09em;line-height:1.15;text-transform:uppercase;font-weight:700;margin-top:6px}
+.p-hero h2{font-size:clamp(24px,3.4vw,38px);letter-spacing:-.01em;line-height:1.15;font-weight:600;margin-top:6px}
 .crumbs{display:flex;flex-wrap:wrap;gap:6px 20px;padding-block:16px 6px}
 .crumbs span{color:var(--red);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
 .crumbs span.here{color:var(--grey)}
@@ -209,7 +209,25 @@ figcaption b{color:var(--ink);font-weight:600}
 .prof-crop{position:relative;overflow:hidden;background:#FFFFFF;border:1px solid var(--rule)}
 .prof-crop img{position:absolute;max-width:none;height:auto}
 
+/* mass balance (EXT-01) */
+.sub-h{font-size:clamp(19px,2.2vw,24px);letter-spacing:-.01em;font-weight:600;color:var(--text);margin:clamp(44px,6vw,68px) 0 10px;padding-top:24px;border-top:1px solid var(--grey)}
+.mb-lead{color:var(--muted);font-size:14.5px;margin-bottom:20px}
+.mbal{display:grid;gap:14px;max-width:760px}
+.mrow{display:grid;grid-template-columns:140px minmax(0,1fr) 96px;gap:16px;align-items:center}
+.ml{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+.ml small{display:block;font-size:12px;font-weight:400;letter-spacing:.02em;text-transform:none;color:var(--muted)}
+.mbar{display:block;height:22px;background:var(--panel)}
+.mbar i{display:block;height:100%}
+.mrow b{font-size:clamp(18px,2vw,22px);font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+@media (max-width:560px){.mrow{grid-template-columns:84px minmax(0,1fr) auto;gap:10px}.mrow b{font-size:16px}}
+
+.ptable-wrap{overflow-x:auto;margin-top:20px}
+.ptable{border-collapse:collapse;width:100%;min-width:480px;font-size:14px;font-variant-numeric:tabular-nums}
+.ptable th,.ptable td{padding:9px 10px;border-bottom:1px solid var(--rule);text-align:left}
+.ptable thead th{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+.ptable tbody th{font-weight:600;color:var(--text)}
 /* drawing viewer */
+.lb[hidden]{display:none}
 .lb{position:fixed;inset:0;z-index:60;background:rgba(28,22,22,.97);display:flex;flex-direction:column}
 .lb-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:calc(10px + env(safe-area-inset-top,0px)) 16px 10px;color:var(--on-dark)}
 .lb-title{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
@@ -222,6 +240,9 @@ figcaption b{color:var(--ink);font-weight:600}
 .lb-help{color:var(--on-dark-soft);font-size:12px;padding:8px 16px calc(8px + env(safe-area-inset-bottom,0px))}
 
 /* profile */
+.prof-intro{display:grid;grid-template-columns:170px minmax(0,1fr);gap:28px;align-items:start}
+.me{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border:1px solid var(--rule)}
+@media (max-width:560px){.prof-intro{grid-template-columns:minmax(0,1fr);gap:18px}.me{max-width:150px}}
 .timeline{display:grid;margin-top:30px;border-top:1px solid var(--grey)}
 .tl{display:grid;grid-template-columns:150px minmax(0,1fr);gap:18px;padding-block:16px;border-bottom:1px solid var(--rule)}
 @media (max-width:560px){.tl{grid-template-columns:minmax(0,1fr);gap:4px}}
@@ -248,11 +269,10 @@ figcaption b{color:var(--ink);font-weight:600}
   <div class="lb-help">Scroll or pinch to zoom · drag to move · double-click to zoom in · Esc to close</div>
 </div>
 
-<button class="notes-toggle" id="notesToggle" type="button" aria-pressed="false">Ocultar notas</button>
 
 <!-- ================= COVER ================= -->
 <header class="cover" id="top">
-  <div class="cover-panel on-dark">
+  <div class="cover-panel">
     <div class="topbar">
       <div class="mark"><b>BRYAN NARANJO</b><span>CIVIL ENGINEER · ROADS</span></div>
       <nav class="nav" aria-label="Sections">
@@ -270,7 +290,7 @@ figcaption b{color:var(--ink);font-weight:600}
         <li><a href="#k206"><b>02</b>K206 Roundabout Detour</a></li>
         <li><a href="#sto"><b>03</b>Storavatnet Temporary Roundabout</a></li>
         <li><a href="#kip"><b>04</b>Kiplevatnet Grouting Platform</a></li>
-        <li><a href="#a03"><b>05</b>Rebuilding Roads That Stay in Service</a></li>
+        <li><a href="#ext"><b>05</b>EXT-01 Construction Access</a></li>
         <li><a href="#gis"><b>06</b>GIS &amp; BIM for 245 Road Models</a></li>
       </ol>
     </div>
@@ -281,14 +301,14 @@ figcaption b{color:var(--ink);font-weight:600}
     <a class="tile t-b" href="#kip"><img src="img/kip_zoom.jpg" alt="Plan of the Kiplevatnet work platform with lagoons and plant area"><span><b>04</b>Kiplevatnet</span></a>
     <a class="tile t-e" href="#gis"><img src="img/sotra_phases_c.jpg" alt="Map of roads coloured by construction phase"><span><b>06</b>GIS</span></a>
     <a class="tile t-c" href="#rn2"><img src="img/hero.jpg" alt="Aerial plan of the proposed complete street on Route 2"><span><b>01</b>Route 2</span></a>
-    <a class="tile t-d" href="#a03"><img src="img/nova_3d_a.jpg" alt="3D road model in Novapoint"><span><b>05</b>Area 03</span></a>
+    <a class="tile t-g" href="#ext"><img src="img/ext_cf_fil.jpg" alt="Cut and fill map of the EXT-01 access over the orthophoto" style="object-position:42% 50%"><span><b>05</b>EXT-01</span></a>
   </div>
 </header>
 
 <div class="catbar">
   <div class="wrap">
     <span class="caps">Application · Civil – Project Engineer · San José, Costa Rica</span>
-    <span class="meta">Civil 3D · Novapoint · Navisworks · QGIS · Python / Dynamo</span>
+    <span class="meta">Civil 3D · InfoDrainage · Novapoint · Navisworks · QGIS · Python / Dynamo</span>
   </div>
 </div>
 
@@ -296,13 +316,13 @@ figcaption b{color:var(--ink);font-weight:600}
 <section id="intro">
   <div class="wrap grid-3">
     <div class="prose">
-      <p class="lead">I design roads and the ground they sit on, and I like the part where a drawing has to survive contact with the site.</p>
+      <p class="lead">I design safe, sustainable roads and streets for everyone who uses them, whether they walk, cycle, take the bus or drive.</p>
       <p>For more than three years I have worked for the design-build contractor on Sotrasambandet, a €1 billion+ public-private partnership that replaces the road link between Bergen and the island of Sotra while it stays open to traffic. I started as a BIM engineer drawing temporary roads and work platforms, became Project Engineer for Roads, and since December 2025 I lead the road discipline: a team of three designers, plus the field change requests, inspection requests, RFIs and technical clarifications that pass between site, designers and the Norwegian Public Roads Administration.</p>
       <p>Before Norway I modelled MEP, architecture and structures in Madrid, and for my master's thesis I redesigned a 1.5 km stretch of National Route 2 in Pérez Zeledón as a complete street. The six projects below show how I handle road design, grading and earthworks, drainage and utilities, GIS and coordination with the people who build.</p>
     </div>
-    <aside class="facts on-dark" aria-label="Key facts">
+    <aside class="facts" aria-label="Key facts">
       <dl>
-        <div><dt>Based in</dt><dd>Bergen, Norway<small>Relocating to San José, Costa Rica · <span class="todo">fecha de inicio disponible</span></small></dd></div>
+        <div><dt>Based in</dt><dd>Bergen, Norway<small>Relocating to San José, Costa Rica</small></dd></div>
         <div><dt>Current role</dt><dd>Discipline Leader, Roads<small>Sotra Link Construction JV (Webuild · FCC · SK ecoplant)</small></dd></div>
         <div><dt>Education</dt><dd>Licentiate in Construction Engineering, TEC<small>MSc BIM, IDESIE · MSc Smart Mobility, Structuralia / Univ. Isabel I</small></dd></div>
         <div><dt>Languages</dt><dd>Spanish (native) · English (advanced)</dd></div>
@@ -325,7 +345,7 @@ figcaption b{color:var(--ink);font-weight:600}
             <th scope="col"><a href="#k206">02</a><small>K206 detour</small></th>
             <th scope="col"><a href="#sto">03</a><small>Storavatnet</small></th>
             <th scope="col"><a href="#kip">04</a><small>Platform</small></th>
-            <th scope="col"><a href="#a03">05</a><small>Area 03</small></th>
+            <th scope="col"><a href="#ext">05</a><small>EXT-01</small></th>
             <th scope="col"><a href="#gis">06</a><small>GIS / BIM</small></th>
             <th scope="col"><a href="#profile">Daily</a><small>Disc. Leader</small></th>
           </tr>
@@ -333,16 +353,16 @@ figcaption b{color:var(--ink);font-weight:600}
         <tbody>
           <tr><th scope="row">Road design</th><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td></tr>
           <tr><th scope="row">Site grading &amp; earthworks</th><td></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td></td><td></td></tr>
-          <tr><th scope="row">Earthwork calculations</th><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td></tr>
-          <tr><th scope="row">Drainage</th><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td></td><td></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td></td><td></td></tr>
-          <tr><th scope="row">Utility layout</th><td></td><td></td><td></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td></td><td></td></tr>
+          <tr><th scope="row">Earthwork calculations</th><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td></tr>
+          <tr><th scope="row">Drainage</th><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td></td><td></td><td></td></tr>
+          <tr><th scope="row">Utility layout</th><td></td><td></td><td></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td></td><td></td><td></td></tr>
           <tr><th scope="row">Civil 3D &amp; other civil software</th><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td></td></tr>
-          <tr><th scope="row">Costs &amp; feasibility</th><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td></td><td></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td></tr>
+          <tr><th scope="row">Costs &amp; feasibility</th><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td></tr>
           <tr><th scope="row">GIS</th><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td></td><td></td><td></td><td></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td></td></tr>
-          <tr><th scope="row">Construction phasing &amp; traffic management</th><td></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td></td></tr>
-          <tr><th scope="row">Coordinating design &amp; construction teams</th><td></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td></tr>
+          <tr><th scope="row">Construction phasing &amp; traffic management</th><td></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td></td></tr>
+          <tr><th scope="row">Coordinating design &amp; construction teams</th><td></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td></tr>
           <tr><th scope="row">Construction inspection &amp; quality</th><td></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td></td><td></td><td></td><td></td><td><i class="dot" role="img" aria-label="main focus"></i></td></tr>
-          <tr><th scope="row">Pedestrians, transit &amp; sustainable design</th><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td></td><td></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td></td><td></td></tr>
+          <tr><th scope="row">Pedestrians, transit &amp; sustainable design</th><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td></td><td></td><td></td><td></td><td></td></tr>
         </tbody>
       </table>
     </div>
@@ -359,7 +379,7 @@ figcaption b{color:var(--ink);font-weight:600}
       <a class="card" href="#k206"><img src="img/k206_built.jpg" alt="Aerial photo of the built K206 detour" loading="lazy"><div class="cap"><span>Bildøy, Norway · built 2026</span><b>K206 Roundabout Detour</b></div></a>
       <a class="card" href="#sto"><img src="img/t5_3d_b.jpg" alt="3D model of the Storavatnet temporary roundabout" loading="lazy"><div class="cap"><span>Storavatnet, Bergen · 2026</span><b>Storavatnet Temporary Roundabout</b></div></a>
       <a class="card" href="#kip"><img src="img/kip_3d.jpg" alt="3D model of the Kiplevatnet work platform" loading="lazy"><div class="cap"><span>Drotningsvik, Norway</span><b>Kiplevatnet Grouting Platform</b></div></a>
-      <a class="card" href="#a03"><img src="img/nova_3d_a.jpg" alt="3D road model with cut and fill slopes" loading="lazy"><div class="cap"><span>Bildøy, Norway</span><b>Rebuilding Roads That Stay in Service</b></div></a>
+      <a class="card" href="#ext"><img src="img/ext_card.jpg" alt="Swept paths of a truck and trailer at the new junction on Rv. 555" loading="lazy"><div class="cap"><span>Straume, Norway · NPRA approval</span><b>EXT-01 Construction Access</b></div></a>
       <a class="card" href="#gis"><img src="img/sotra_phases_c.jpg" alt="Map of roads coloured by construction phase" loading="lazy"><div class="cap"><span>Rv. 555, 11 areas</span><b>GIS &amp; BIM for 245 Road Models</b></div></a>
     </div>
   </div>
@@ -377,17 +397,17 @@ figcaption b{color:var(--ink);font-weight:600}
       <div class="prose">
         <p class="lead">A 1.5 km redesign of the Inter-American Highway through San Isidro de El General, turning a four-lane, car-first corridor into a street for people who walk, cycle, take the bus and drive.</p>
         <p>National Route 2 crosses the urban core of Pérez Zeledón with a two-way centre turn lane, dozens of uncontrolled accesses and no room for bicycles. COSEVI crash maps put the canton's worst clusters on this stretch. Using municipal counts (MDPZ, 2021), aerial imagery and field visits, I mapped every vehicle conflict point and designed a complete-street alternative.</p>
-        <p>The design removes all left turns along the corridor and concentrates turning movements in two roundabouts. Lanes narrow to 3.25 m, enough for the articulated design truck with 0.65 m between vehicles, and below the 3.65 m the SIECA manual prefers, as a deliberate traffic-calming measure. Each side gets a 2.0 m protected bike lane behind a 10 cm curb, a 2.5 m sidewalk and a planted strip of shade trees in a valley where temperatures run from 19 to 30 °C. Crossings follow the desire lines seen on site, and 2,120 m of open roadside ditch become buried storm pipe.</p>
-        <p>I modelled the corridor in Civil 3D, ran SUMO micro-simulations for today's traffic and for 2035, and priced two scenarios, with and without two 140 m grade separations, including a social payback based on crash costs. The simulations also showed the limit of the design: without better transit and a heavy-vehicle bypass, the travel-time gains fade within ten years.</p>
+        <p>The design removes all left turns along the corridor and concentrates turning movements in two roundabouts. Lanes narrow to 3.25 m, enough for the articulated design truck with 0.65 m between vehicles, and below the 3.65 m the SIECA manual prefers, as a deliberate traffic-calming measure. Each side gets a 2.0 m protected bike lane behind a 10 cm curb, a 2.5 m sidewalk and a planted strip of shade trees or bushes in a valley where temperatures run from 19 to 30 °C. Crossings follow the desire lines seen on site, and 2,120 m of open roadside ditch become buried storm pipe.</p>
+        <p>I modelled the corridor in Civil 3D, ran SUMO micro-simulations for today's traffic and for 2035, and priced two scenarios, with and without two 140 m underpasses beneath the two roundabouts, including a social payback based on crash costs. The simulations also showed the limit of the design: without better transit and a heavy-vehicle bypass, the travel-time gains fade within ten years.</p>
       </div>
-      <aside class="facts on-dark" aria-label="Project facts">
+      <aside class="facts" aria-label="Project facts">
         <dl>
           <div><dt>Location</dt><dd>San Isidro de El General, Pérez Zeledón, Costa Rica</dd></div>
           <div><dt>Type</dt><dd>Master's thesis, conceptual design<small>MSc Smart Mobility · Structuralia / Univ. Isabel I</small></dd></div>
           <div><dt>Role</dt><dd>Sole author: diagnosis, geometric design, simulation and cost estimate</dd></div>
           <div><dt>Tools</dt><dd>Civil 3D · SUMO · Excel</dd></div>
           <div><dt>References</dt><dd>SIECA · AASHTO · Inclusive Mobility (UK DfT)</dd></div>
-          <div><dt>Status</dt><dd>Completed February 2025 <span class="todo">nota / mención obtenida</span></dd></div>
+          <div><dt>Status</dt><dd>Completed February 2025</dd></div>
         </dl>
       </aside>
     </div>
@@ -396,7 +416,7 @@ figcaption b{color:var(--ink);font-weight:600}
       <div class="fig"><b>1.5 km</b><span>urban corridor with a 24.0 m typical section</span></div>
       <div class="fig"><b>92 → 29</b><span>vehicle conflict points (−68.5 %)</span></div>
       <div class="fig"><b>−50 %</b><span>travel time in year one (SUMO), converging again by 2035</span></div>
-      <div class="fig"><b>US$&nbsp;8.5–23.1&nbsp;M</b><span>two cost scenarios, with and without grade separations</span></div>
+      <div class="fig"><b>US$&nbsp;8.5–23.1&nbsp;M</b><span>two cost scenarios, with and without underpasses</span></div>
     </div>
     <div class="qty"><span>Roadway <b>31,750 m²</b></span><span>Sidewalks <b>14,520 m²</b></span><span>Bike lanes <b>5,020 m²</b></span><span>Curbs <b>7,950 m</b></span><span>Green areas <b>735 m²</b></span><span>Trees <b>140</b></span><span>Land acquisition <b>4,000 m²</b></span></div>
 
@@ -409,7 +429,7 @@ figcaption b{color:var(--ink);font-weight:600}
           <span class="tag l">Existing conflicts</span><span class="tag r">Proposed</span>
           <input type="range" min="0" max="100" value="50" aria-label="Compare existing and proposed design of Section 01">
         </div>
-        <figcaption><b>Section 01, before and after.</b> Drag to compare. Left: the existing four-lane road with a centre turn lane and an uncontrolled access strip (red). Right: left turns removed, protected bike lanes, wider sidewalks, a tree strip and formal crossings. <span class="todo">fuente / crédito de la ortofoto (¿vuelo propio, Municipalidad, PEMSS?)</span></figcaption>
+        <figcaption><b>Section 01, before and after.</b> Drag to compare. Left: the existing four-lane road with a centre turn lane and an uncontrolled access strip (red). Right: left turns removed, protected bike lanes, wider sidewalks, a tree strip and formal crossings. Base orthophoto from my own drone flight.</figcaption>
       </figure>
       <figure>
         <div class="frame"><img src="img/rn2_section.jpg" alt="Proposed typical cross-section with sidewalks, bike lanes, trees and four 3.25 m lanes" loading="lazy"></div>
@@ -417,10 +437,9 @@ figcaption b{color:var(--ink);font-weight:600}
       </figure>
       <figure>
         <div class="frame"><img src="img/rn2_overview.jpg" alt="Overview of the corridor divided into five design sections" loading="lazy"></div>
-        <figcaption><b>Corridor overview.</b> The 1.5 km study stretch split into five design sections; Section 05 ends in the roundabout that absorbs the left turns and U-turns removed elsewhere.</figcaption>
+        <figcaption><b>Corridor overview.</b> The 1.5 km study stretch split into five design sections, with the two roundabouts that absorb the left turns and U-turns removed along the corridor.</figcaption>
       </figure>
     </div>
-    <p class="note-block"><span class="idea">tienes el video explicativo del TFM (VideoExplicativo_TFM.mp4, 47 MB). Un clip de 20–30 s, o 2–3 capturas de la simulación en SUMO, mostraría el análisis de tráfico, que hoy solo se describe en texto. Si me pasas el clip recortado (menos de 15 MB) lo integro aquí.</span></p>
   </div>
 </article>
 
@@ -434,25 +453,26 @@ figcaption b{color:var(--ink);font-weight:600}
     <div class="pn"><a href="#rn2">Previous</a><a href="#sto">Next</a></div>
     <div class="grid-3">
       <div class="prose">
-        <p class="lead">A temporary roundabout and three connecting roads that cleared the site of the K206 grade separation while cars, buses and people on foot kept moving.</p>
-        <p>For Phase 2, construction needed the whole area around the K206 grade separation free. Rv. 555 allows no left-turning junctions along its length, so the detour joins the local roads through a roundabout. I set the roundabout and its three approaches (alignments A, B and C) to follow the levels and alignment of the permanent roads they meet wherever the geometry allowed, so that the material placed for the detour serves the final works and the volume of fill stays low.</p>
+        <p class="lead">A temporary roundabout and three connecting roads that cleared the site for the new K206 bridge while cars, buses and people on foot kept moving.</p>
+        <p>For Phase 2, construction needed the whole area where the new K206 bridge was to be built cleared. Rv. 555 allows no left-turning junctions along its length, so the detour joins the local roads through a roundabout. I set the roundabout and its three approaches (alignments A, B and C) to follow the levels and alignment of the permanent roads they meet wherever the geometry allowed, so that the material placed for the detour serves the final works and the volume of fill stays low.</p>
         <p>The detour also had to work for public transport and pedestrians: a U-turn for buses at the end of one arm, a bus stop on another, sidewalks on the streets that needed them and safe crossing points laid out following Statens vegvesen handbook V127, <i>Kryssingssteder for gående</i> (crossing points for pedestrians).</p>
-        <p>It was one of the most demanding detours on the project. We developed and compared several layouts with Construction, Traffic and Temporary Works before finding one that served pedestrians, buses and private cars at the same time. The fifth version of the design, issued in January 2026, is the one on the ground today. <span class="todo">confirmar que V05 fue la versión construida y la fecha de apertura</span></p>
+        <p>It was one of the most demanding detours on the project. We developed and compared several layouts with Construction, Traffic and Temporary Works before finding one that served pedestrians, buses and private cars at the same time. The final design was built in 2026 and is the one on the ground today.</p>
+        <p><b>Drainage.</b> For Phase 3 of the detour I also designed the drainage: where the water goes, how much water comes to each point, and the size of the three pipes under the road. See "Drainage of the detour" below.</p>
+        <p><b>Pavement.</b> The detour has 30 mm wearing course (Ab11), 30 mm binder course (Agb11), 200 mm base course (Fk 0/32) and 300 mm subbase of crushed rock.</p>
       </div>
-      <aside class="facts on-dark" aria-label="Project facts">
+      <aside class="facts" aria-label="Project facts">
         <dl>
           <div><dt>Location</dt><dd>Skjergardsvegen, Bildøy, Øygarden (Area 03)</dd></div>
           <div><dt>Client</dt><dd>Statens vegvesen (NPRA)<small>PPP · design &amp; build contractor: Sotra Link Construction JV</small></dd></div>
-          <div><dt>Role</dt><dd>Road designer and coordinator with Construction, Traffic and Temporary Works <span class="todo">confirmar</span></dd></div>
-          <div><dt>Tools</dt><dd>Civil 3D (alignments, profiles, corridors, grading) · drone orthophotos</dd></div>
+          <div><dt>Role</dt><dd>Road Designer and Coordinator</dd></div>
+          <div><dt>Tools</dt><dd>Civil 3D · Novapoint</dd></div>
           <div><dt>Standards</dt><dd>Håndbok N100 · V127 Kryssingssteder for gående</dd></div>
-          <div><dt>Status</dt><dd>Design V05, January 2026 · built</dd></div>
+          <div><dt>Status</dt><dd>Designed and built in 2026</dd></div>
         </dl>
       </aside>
     </div>
 
     <div class="figs">
-      <div class="fig"><b>V05</b><span>fifth design iteration, the one built</span></div>
       <div class="fig"><b>≈ 860 m</b><span>of new alignment in A, B and C, tied into permanent road levels</span></div>
       <div class="fig"><b>3</b><span>user groups designed for: pedestrians, buses and private cars</span></div>
     </div>
@@ -463,14 +483,16 @@ figcaption b{color:var(--ink);font-weight:600}
           <img src="img/k206_design.jpg" alt="Detour design drawn over the orthophoto taken before construction" loading="lazy">
           <img class="after" src="img/k206_built.jpg" alt="Drone orthophoto of the detour after construction" loading="lazy">
           <span class="line"></span><span class="knob" aria-hidden="true">⇆</span>
-          <span class="tag l">Design V05</span><span class="tag r">As built</span>
+          <span class="tag l">Design</span><span class="tag r">As built</span>
           <input type="range" min="0" max="100" value="50" aria-label="Compare the detour design with the built detour">
         </div>
-        <figcaption><b>From drawing to road.</b> Drag to compare the January 2026 design, drawn over the pre-construction orthophoto, with a drone orthophoto of the same frame after the detour opened.</figcaption>
+        <figcaption><b>From drawing to road.</b> Drag to compare the final design, drawn over the pre-construction orthophoto, with a drone orthophoto of the same frame after the detour opened.</figcaption>
       </figure>
       <figure>
         <div class="frame"><img src="img/k206_design_zoom.jpg" alt="Close-up of the roundabout and arm B with sidewalk and bus turning loop" loading="lazy"></div>
-        <figcaption><b>Roundabout and arm B.</b> Splitter islands, a sidewalk along arm B (pink) and the turning loop at its south end. <span class="todo">confirmar que el lazo es el U-turn de buses y dónde está la parada</span></figcaption>
+        <figcaption><b>Roundabout and arm B.</b> Splitter islands, a sidewalk along arm B (pink) that ends at the bus stop, and the bus turning loop at its south end.</figcaption>
+        <div class="frame" style="margin-top:12px;background:#FFFFFF"><img src="img/t5_pavement.png" alt="Pavement layers: Ab11 30 mm, Agb11 30 mm, Fk 0/32 200 mm, crushed rock subbase 300 mm" loading="lazy"></div>
+        <figcaption><b>Pavement of the detour.</b> Asphalt in two layers, 60 mm in total, on a 200 mm base course and a 300 mm crushed rock subbase.</figcaption>
       </figure>
       <figure>
         <div class="frame"><img src="img/k206_3d_rbt.jpg" alt="3D corridor model of the roundabout over the terrain mesh" loading="lazy"></div>
@@ -483,7 +505,38 @@ figcaption b{color:var(--ink);font-weight:600}
         <figcaption><b>Longitudinal profiles, vector from the Civil 3D sheet.</b> Grade lines, vertical curve radii, crossfall bands and chainage tables. Select any profile to open it full screen and zoom into the labels.</figcaption>
       </figure>
     </div>
-    <p class="note-block"><span class="idea">la historia más fuerte de este proyecto son las opciones descartadas. Una tira con 2–3 versiones anteriores (V01–V04) y una línea sobre por qué no funcionaron mostraría tu coordinación con Construcción, Tráfico y Trabajos Temporales. Suma también una foto a nivel de calle con un bus usando el U-turn y, si lo tienes, cuántos m³ de relleno se ahorraron al seguir los niveles permanentes.</span></p>
+  
+    <h3 class="sub-h">Drainage of the detour (Phase 3)</h3>
+    <div class="grid-3">
+      <div class="prose">
+        <p>In Phase 3 the detour crosses the natural drainage of the area in three places. I checked where the water goes, how much water comes to each of the 9 drainage points, and the size of the three road crossings.</p>
+        <p><b>Tools.</b> I exported the Civil 3D ground surface as a 1 m grid (about 20.6 ha) and did the hydrology in QGIS with GRASS tools. The results go back to Civil 3D as shapefiles and 3D lines.</p>
+        <p><b>Road crossings in the model.</b> In the ground model the road fill works like a dam. So I cut a small channel 0.5 m deep through the fill at each crossing. Then the water can pass under the road, like in the real pipe.</p>
+        <p><b>Catchments.</b> I calculated the flow direction of each cell (D8 method), moved each point to the nearest flow line (max. 3 m) and took all the area upstream of it. The fjord, the green area and the natural pond are end points: the water stays there.</p>
+        <p><b>Flows.</b> I used the rational method from Statens vegvesen N200 and V240: Q = C · i · A · Fk · Fu. The time of concentration comes from the N200 formula (minimum 5 minutes). The rain intensity comes from the 5-year IDF curve of Bergen–Florida. Only the 10, 20 and 30 minute values were available, so I estimated the 5 and 15 minute values with the shape of the Bergen–Sandsli curve and a log–log interpolation. I used 5 years because the detour is a temporary solution. The climate factor is 1.4, the safety factor is 1.2, and the runoff factor is 0.90 for asphalt and 0.30 for natural ground, weighted by the asphalt area of each catchment.</p>
+        <p><b>Pipes.</b> I checked each crossing with the inlet-control tables of Vassdragshåndboka, with one third of the inlet blocked. All three crossings use Ø600, the N200 minimum. Crossing B is the tightest: 214 l/s for a capacity of 235 l/s. At crossing B the ground at the outlet is about 0.5 m higher than at the inlet, so the outlet ditch must be dug about 1.1 m down.</p>
+      </div>
+      <figure>
+        <div class="frame zoomable" role="button" tabindex="0" data-src="img/k206_catchments.jpg" data-w="1400" data-h="1200" data-title="K206 Phase 3 · Drainage catchments and flows" aria-label="Open the K206 drainage catchment map in full detail"><img src="img/k206_catchments.jpg" alt="Map of the drainage catchments of the K206 Phase 3 detour, with the flow at each point" loading="lazy"><span class="zoom-hint">⤢ Zoom</span></div>
+        <figcaption><b>Drainage catchments, Phase 3.</b> Each colour is the area that drains to one point. The red lines are the three road crossings. The labels show the 5-year flow in l/s. Select to zoom.</figcaption>
+      </figure>
+    </div>
+    <div class="figs">
+      <div class="fig"><b>≈ 20.6 ha</b><span>area studied, 1 m grid</span></div>
+      <div class="fig"><b>9</b><span>drainage points</span></div>
+      <div class="fig"><b>612 l/s</b><span>largest flow, into the natural pond</span></div>
+      <div class="fig"><b>3 × Ø600</b><span>pipes under the road</span></div>
+    </div>
+    <div class="ptable-wrap">
+      <table class="ptable">
+        <thead><tr><th scope="col">Crossing</th><th scope="col">Flow</th><th scope="col">Length</th><th scope="col">Capacity, 1/3 blocked</th><th scope="col">Use</th><th scope="col">Size</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">A (P3 → P4)</th><td>191 l/s</td><td>16 m</td><td>235 l/s</td><td>81 %</td><td>Ø600</td></tr>
+          <tr><th scope="row">B (P5 → P6)</th><td>214 l/s</td><td>21 m</td><td>235 l/s</td><td>91 %</td><td>Ø600 (Ø800 if the asphalt area grows)</td></tr>
+          <tr><th scope="row">C (P7 → P8)</th><td>21 l/s</td><td>9 m</td><td>235 l/s</td><td>9 %</td><td>Ø600 (N200 minimum)</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </article>
 
@@ -498,20 +551,22 @@ figcaption b{color:var(--ink);font-weight:600}
     <div class="grid-3">
       <div class="prose">
         <p class="lead">A two-phase temporary roundabout at one of the busiest junctions in Norway, designed so that each phase change and each fix to the existing road could be done in a few nights.</p>
-        <p>At Storavatnet the project has to build two new bridges parallel to the existing main road, demolish and rebuild an underpass beneath it and put up a new retaining wall. That closes the link that ran under the road, so traffic from the north and from the west needed a new connection. I designed a temporary roundabout to carry all of it, with five new alignments: A, B, C1, C2 and Ramp AB.</p>
-        <p>The layout had to avoid rock blasting east of the roundabout, tie into the existing ramp between the two roundabouts to the north, keep the north–east ramp open, follow existing road levels so the temporary road is quick to build, separate opposing lanes physically, and give the bypass curves suitable speeds without clashing with the excavation for the new underpass.</p>
+        <p>At Storavatnet the project has to build two new bridges parallel to the existing main road, demolish and rebuild an underpass beneath it and put up a new retaining wall. That closes the link that ran under the road, so traffic from the north and from the west needed a new connection. I designed a temporary roundabout to carry all of it, with five new alignments: A, B, C1, C2 and Ramp AB. The drawings and images below show the problem and the solution in more detail.</p>
+        <p>The excavation for the new road had to avoid rock blasting east of the roundabout. The road also had to tie into the existing ramp between the two roundabouts to the north, keep the north–east ramp open, follow existing road levels so it is quick to build, separate opposing lanes physically, and give the bypass curves suitable speeds without clashing with the excavation for the new underpass.</p>
         <p><b>Two phases, one night to switch.</b> The retaining wall is built in five sections over two phases, so the detour has two phases as well. Phase 1 can stay at the level of the existing road. Phase 2 has to pass over the finished part of the wall, clear the Phase 2 excavation and the underpass under construction, and still meet Phase 1 exactly, so the switch can be made in a single night. Getting there meant using the lowest superelevation the standard allows on the curves while staying safe, and a lot of work on the levels.</p>
-        <p><b>A curve that leaned the wrong way.</b> The ramp and the east approach turn right over a carriageway with a −5 % crossfall: adverse superelevation for those curves, and not acceptable with winter coming. The Traffic department asked for it to be corrected under a short night diversion. I tightened the transition within the Norwegian standard until the new surface met the old one cleanly. Most of the tie-in changes by 4 cm or less and can be paved in one asphalt layer while it stays open; the deeper excavation is kept clear of the ramps, so the correction fits in three nights.</p>
+        <p>The design also corrects the crossfall of the existing road where the ramp and the east approach meet it. Those curves turn right over a carriageway sloping at −5 %, which is adverse superelevation, so the Traffic department asked for it to be fixed under a short night diversion. I adjusted the transition within the Norwegian standard so that most of the tie-in changes by 4 cm or less and can be paved in one asphalt layer, and the deeper excavation stays clear of the ramps. The whole correction fits in three nights.</p>
+        <p><b>Drainage.</b> I also designed the drainage of the detour: where the water goes, how much water comes to each point, and the size of the new pipes. See "Drainage of the detour" below.</p>
+        <p><b>Pavement.</b> The detour has 30 mm wearing course (Ab11), 30 mm binder course (Agb11), 200 mm base course (Fk 0/32) and 300 mm subbase of crushed rock.</p>
       </div>
-      <aside class="facts on-dark" aria-label="Project facts">
+      <aside class="facts" aria-label="Project facts">
         <dl>
           <div><dt>Location</dt><dd>Storavatnet, Bergen (Area 11)</dd></div>
           <div><dt>Client</dt><dd>Statens vegvesen (NPRA)<small>PPP · design &amp; build contractor: Sotra Link Construction JV</small></dd></div>
           <div><dt>Road</dt><dd>Temporary road 541104</dd></div>
-          <div><dt>Role</dt><dd>Road designer; coordination with Traffic, Construction and Temporary Works <span class="todo">confirmar</span></dd></div>
-          <div><dt>Tools</dt><dd>Civil 3D (corridors, superelevation, surface comparison) · Navisworks · IFC · photogrammetric 3D mesh</dd></div>
+          <div><dt>Role</dt><dd>Road Designer and Coordinator</dd></div>
+          <div><dt>Tools</dt><dd>Civil 3D · Novapoint</dd></div>
           <div><dt>Standard</dt><dd>Håndbok N100</dd></div>
-          <div><dt>Status</dt><dd>Phase 1 design, version 06, October 2026 <span class="todo">¿fase 1 ya construida? ¿se ejecutó la corrección en las 3 noches?</span></dd></div>
+          <div><dt>Status</dt><dd>Phase 1 design, version 06, October 2026<small>Construction scheduled for December 2026</small></dd></div>
         </dl>
       </aside>
     </div>
@@ -520,9 +575,8 @@ figcaption b{color:var(--ink);font-weight:600}
       <div class="fig"><b>≈ 850 m</b><span>of new alignment: A, B, C1, C2 and Ramp AB</span></div>
       <div class="fig"><b>1 night</b><span>to switch from Phase 1 to Phase 2</span></div>
       <div class="fig"><b>−5 %</b><span>adverse crossfall corrected on the ramp and east approach</span></div>
-      <div class="fig"><b>≤ 4 cm</b><span>level change over most of the tie-in, paved under traffic</span></div>
     </div>
-    <div class="qty"><span>IFC model take-off:</span><span>Wearing course <b>8,607 m²</b></span><span>Base course <b>1,768 m³</b></span><span>Sub-base <b>2,709 m³</b></span><span>Soil cut <b>2,392 m³</b></span><span>Rock cut <b>765 m³</b></span><span>Blasted-rock fill <b>7,451 m³</b></span><span class="todo">cantidades del modelo IFC de agosto 2026: confirmar si siguen válidas para la V06</span></div>
+    <div class="qty"><span>IFC model take-off:</span><span>Wearing course <b>8,607 m²</b></span><span>Base course <b>1,768 m³</b></span><span>Sub-base <b>2,709 m³</b></span><span>Soil cut <b>2,392 m³</b></span><span>Rock cut <b>765 m³</b></span><span>Blasted-rock fill <b>7,451 m³</b></span><span>Rock cut and fill are part of the permanent works</span></div>
 
     <div class="gallery">
       <figure class="wide">
@@ -552,6 +606,8 @@ figcaption b{color:var(--ink);font-weight:600}
       <figure>
         <div class="frame"><img src="img/t5_design_zoom.jpg" alt="Close-up of the roundabout with curve radii labelled on each approach" loading="lazy"></div>
         <figcaption><b>Roundabout detail.</b> Curve radii labelled on every approach, splitter islands and the tie-ins to the existing roundabout to the north.</figcaption>
+        <div class="frame" style="margin-top:12px;background:#FFFFFF"><img src="img/t5_pavement.png" alt="Pavement layers: Ab11 30 mm, Agb11 30 mm, Fk 0/32 200 mm, crushed rock subbase 300 mm" loading="lazy"></div>
+        <figcaption><b>Pavement of the detour.</b> Asphalt in two layers, 60 mm in total, on a 200 mm base course and a 300 mm crushed rock subbase.</figcaption>
       </figure>
       <figure>
         <div class="frame"><img src="img/t5_3d_b.jpg" alt="3D corridor model of the roundabout on the photogrammetric mesh" loading="lazy"></div>
@@ -564,7 +620,36 @@ figcaption b{color:var(--ink);font-weight:600}
         <figcaption><b>Longitudinal profiles, version 06.</b> Vector from the Civil 3D sheet, so every label stays sharp: grade lines over existing ground, vertical curve radii, horizontal curves and the crossfall band (TVERRFALL) where the superelevation was worked out. Select a profile to zoom.</figcaption>
       </figure>
     </div>
-    <p class="note-block"><span class="idea">la corrección del peralte es lo más técnico del portafolio y lo que más te diferencia. Una sección transversal antes/después (−5 % existente frente al peralte corregido, con la dirección de la curva) la haría entendible para alguien que no es vial en 5 segundos; si me das el peralte final y la velocidad de diseño, la dibujo. También suma una foto de la noche del cambio de fase y el tráfico diario del cruce (vehículos/día) para respaldar con un número que es uno de los más transitados de Noruega.</span></p>
+  
+    <h3 class="sub-h">Drainage of the detour</h3>
+    <div class="grid-3">
+      <div class="prose">
+        <p>The detour changes how water runs over the area. So I checked where the water goes and how much water comes to each drainage point.</p>
+        <p><b>Tools.</b> Civil 3D gave too many very small catchments, because of flat triangles in the surface. So I exported the Civil 3D ground surface as a 1 m grid (about 34 ha) and did the hydrology in QGIS with GRASS tools. The results go back to Civil 3D as shapefiles and 3D lines.</p>
+        <p><b>Catchments.</b> First I calculated the flow direction of each cell (D8 method) and the flow accumulation. Then I moved each drainage point to the nearest flow line (max. 3 m) and took all the area upstream of it. If water already goes into an existing or permanent gully, I took that area out of the points below. A 5 m grid was tested first, but it could not see the small ditches.</p>
+        <p><b>Flows.</b> I used the rational method from Statens vegvesen N200 and V240: Q = C · i · A · Fk · Fu. The time of concentration comes from the N200 formula (minimum 5 minutes). The rain intensity for that time comes from the 5-year IDF curve of Bergen–Florida. I used 5 years because the detour is a temporary solution; a permanent road would need a much longer return period. The climate factor is 1.4 and the safety factor is 1.2. The runoff factor is 0.90 for asphalt and 0.30 for natural ground, weighted by the asphalt area of each catchment.</p>
+        <p><b>Pipes.</b> I checked each pipe with the inlet-control tables of Vassdragshåndboka, with one third of the inlet blocked, so the pipe can only use 65 % of its capacity. Pipe 19 → 20 needs Ø600, the N200 minimum. Pipe 16 → 17 needs Ø800, or Ø600 if the inlet is a gully with a grating. The water is fast in the pipes, 4 to 5 m/s, so the outlets need protection against erosion.</p>
+      </div>
+      <figure>
+        <div class="frame zoomable" role="button" tabindex="0" data-src="img/t5_catchments.jpg" data-w="1200" data-h="1500" data-title="Storavatnet · Drainage catchments and flows" aria-label="Open the drainage catchment map in full detail"><img src="img/t5_catchments.jpg" alt="Map of the drainage catchments around the temporary roundabout, with the flow at each point" loading="lazy"><span class="zoom-hint">⤢ Zoom</span></div>
+        <figcaption><b>Drainage catchments.</b> Each colour is the area that drains to one point. The labels show the 5-year flow in l/s. Select to zoom.</figcaption>
+      </figure>
+    </div>
+    <div class="figs">
+      <div class="fig"><b>≈ 34 ha</b><span>area studied, 1 m grid</span></div>
+      <div class="fig"><b>9</b><span>drainage points</span></div>
+      <div class="fig"><b>359 l/s</b><span>largest flow, 5-year rain</span></div>
+      <div class="fig"><b>Ø600 / Ø800</b><span>new pipes</span></div>
+    </div>
+    <div class="ptable-wrap">
+      <table class="ptable">
+        <thead><tr><th scope="col">Pipe</th><th scope="col">Flow</th><th scope="col">Length</th><th scope="col">Slope</th><th scope="col">Size</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">19 → 20</th><td>140 l/s</td><td>8 m</td><td>≈ 6 %</td><td>Ø600</td></tr>
+          <tr><th scope="row">16 → 17</th><td>264 l/s</td><td>19 m</td><td>≈ 3.5 %</td><td>Ø800, or Ø600 with a grating</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </article>
 
@@ -575,7 +660,7 @@ figcaption b{color:var(--ink);font-weight:600}
   </div>
   <div class="wrap">
     <div class="crumbs"><span>Site grading &amp; earthworks</span><span>Drainage</span><span>Temporary works</span><span class="here">Area 09, Drotningsvik · Rv. 555 Sotrasambandet</span></div>
-    <div class="pn"><a href="#sto">Previous</a><a href="#a03">Next</a></div>
+    <div class="pn"><a href="#sto">Previous</a><a href="#ext">Next</a></div>
     <div class="grid-3">
       <div class="prose">
         <p class="lead">A work platform for grouting the rock above a shallow tunnel, fitted between a road that had to stay open, buried storm-water pipes and a lake.</p>
@@ -583,14 +668,14 @@ figcaption b{color:var(--ink);font-weight:600}
         <p>The constraints set the geometry. The adjacent road had to stay open at its existing level for the whole operation, so the platform ties into it without changing its grade. Two lagoons, 294 m² and 136 m² with their bottom at +41.88, give at least 400 m³ of retention. Two Ø500 mm storm-water pipes run directly underneath, so every level keeps at least 80 cm of cover over them, with a Ø1500 mm, 3.5 m deep manhole on the line next to the plant area.</p>
         <p>I graded the platform in Civil 3D against the existing terrain and the bedrock surface, keeping the earthworks small and entirely in soil: 714 m³ of excavation, 601 m³ of fill and no rock excavation. The plan, sections and IFC models of the platform, pipes and manhole were issued in March 2024.</p>
       </div>
-      <aside class="facts on-dark" aria-label="Project facts">
+      <aside class="facts" aria-label="Project facts">
         <dl>
           <div><dt>Location</dt><dd>Kiplevatnet, Drotningsvik (Area 09), Bergen</dd></div>
           <div><dt>Client</dt><dd>Sotra Link Construction JV, Temporary Works request 061</dd></div>
           <div><dt>Drawing</dt><dd>SB-SL-09-B-TGH-00061 · Phase 1</dd></div>
           <div><dt>Role</dt><dd>Designer: grading, drainage, quantities, drawings and IFC</dd></div>
           <div><dt>Tools</dt><dd>Civil 3D · IFC · drone orthophoto</dd></div>
-          <div><dt>Status</dt><dd>Issued March 2024 <span class="todo">¿se construyó tal cual? nombre del túnel</span></dd></div>
+          <div><dt>Status</dt><dd>Issued March 2024 · built April 2024</dd></div>
         </dl>
       </aside>
     </div>
@@ -616,54 +701,82 @@ figcaption b{color:var(--ink);font-weight:600}
         <figcaption><b>3D model.</b> Existing road, plant area, Lagoon 01 and 02, working platform, access ramp and storm-water pipe in the terrain model.</figcaption>
       </figure>
     </div>
-    <p class="note-block"><span class="idea">una foto de la plataforma en uso, con los equipos de inyección trabajando, convertiría el plano en obra real. También ayudaría una línea con el cálculo de retención (área × profundidad útil de las lagunas) para mostrar cómo se llega a los 400 m³.</span></p>
   </div>
 </article>
 
-<!-- ================= 05 AREA 03 ================= -->
-<article class="project" id="a03" aria-labelledby="a03-t">
-  <div class="p-hero" style="background-image:url('img/nova_3d_b.jpg')">
-    <div class="wrap"><div class="idx">PROJECT 05</div><h2 id="a03-t">Rebuilding Roads That Stay in Service</h2></div>
+<!-- ================= 05 EXT-01 ================= -->
+<article class="project" id="ext" aria-labelledby="ext-t">
+  <div class="p-hero" style="background-image:url('img/ext_cf_fil.jpg');background-position:center 35%">
+    <div class="wrap"><div class="idx">PROJECT 05</div><h2 id="ext-t">EXT-01 Construction Access</h2></div>
   </div>
   <div class="wrap">
-    <div class="crumbs"><span>Transportation | Roads</span><span>Pavement &amp; earthworks</span><span>Client coordination</span><span class="here">Area 03, Bildøy</span></div>
+    <div class="crumbs"><span>Transportation | Roads</span><span>Site grading &amp; earthworks</span><span>Agency approval</span><span class="here">Area 05, Straume · Rv. 555 Sotrasambandet</span></div>
     <div class="pn"><a href="#kip">Previous</a><a href="#gis">Next</a></div>
     <div class="grid-3">
       <div class="prose">
-        <p class="lead">A technical clarification to the Norwegian Public Roads Administration on how to rebuild three roads that remain open and carry permanent utilities.</p>
-        <p>In Area 03 the new alignments of roads 203000, 203100 and 203400 partly overlap roads already in use, some with permanent utilities underneath. Full excavation would have meant relocating services and disturbing pavements that have long since settled. I redesigned the roads in Novapoint and prepared Technical Clarification TA-254, proposing to keep structurally sound existing pavement, absorb level differences inside the new layer package, build the longitudinal and transverse transitions to the project's Design Basis (plan F003) and re-lay the full wearing course.</p>
-        <p>Where deep blasting is required, a drain pipe at the lowest point of the excavation keeps the lower layers dry, following Håndbok N200 §1.3.4.2. NPRA asked for an overview of where existing structure would be kept and where the road is widened or re-profiled, which became Revision 1 of the TA in June 2026. <span class="todo">confirmar tu rol exacto en el TA y la respuesta final de NPRA</span></p>
-        <p>The same 3D-model discipline goes into reviewing other people's work. For a design claim in 2025 I checked the designer's road models at nine critical chainages on eight roads and documented missing soil and deep-blasting layers with cross-section evidence.</p>
+        <p class="lead">A construction access from Rv. 555 to a storage area for material from the works, sized for a 22 m Norwegian truck and trailer and drawn for approval by the Norwegian Public Roads Administration.</p>
+        <p>The works at Straume needed a place to store the material coming out of the excavations, and a way for full-size trucks to reach it directly from the national road. EXT-01 is that access: a new junction on Rv. 555 and about 185 m of road climbing to the storage area. Because it connects to a national road, the design went to Statens vegvesen (NPRA) for approval as a full drawing set: overview plan, plan and profile, cross sections every 10 m, swept paths and a sign plan.</p>
+        <p><b>Designed around the truck.</b> The design vehicle is the VT, the Norwegian truck-and-trailer combination: 22 m long, 2.6 m wide, with a 12.5 m kerb-to-kerb turning radius. The junction opens with 12 m corner radii on both sides and an 11 m throat, then narrows to a 7.3 m road. I checked the VT's swept path turning in and out of Rv. 555 and through the 20 m and 60 m curves of the access, and drew the 6 × 115 m sight lines in both directions along the national road. The sign plan closes the access to other motor traffic ("Gjelder ikke anleggstrafikk", construction traffic excepted) and puts a road-works warning on each approach of Rv. 555.</p>
+        <p>The first 50 m next to the junction were already part of the existing access, so the profile keeps them almost flat (0.35 %) as they were and adds a 3 % one-way crossfall to manage the water. In a wooded area, the runoff can be handled by infiltration. From there the road climbs at 6 % to the storage area at about +60 m, 4.3 m above the junction, with 100 m and 500 m vertical curves. The road is paved with 20 cm of asphalt in two layers.</p>
       </div>
-      <aside class="facts on-dark" aria-label="Project facts">
+      <aside class="facts" aria-label="Project facts">
         <dl>
-          <div><dt>Location</dt><dd>Bildøy, Øygarden, Norway (Area 03)</dd></div>
-          <div><dt>Client</dt><dd>Statens vegvesen (NPRA)</dd></div>
-          <div><dt>Document</dt><dd>TA-254 · SB-SL-TAC-03-RVD-000001</dd></div>
-          <div><dt>Tools</dt><dd>Novapoint · Civil 3D · Navisworks · IFC</dd></div>
-          <div><dt>Standard</dt><dd>Håndbok N200 (2021)</dd></div>
-          <div><dt>Status</dt><dd>Rev. 1, June 2026 <span class="todo">longitud de las 3 vías</span></dd></div>
+          <div><dt>Location</dt><dd>Straume (Area 05), Øygarden, Norway</dd></div>
+          <div><dt>Client</dt><dd>Sotra Link Construction JV<small>Approval by Statens vegvesen (NPRA)</small></dd></div>
+          <div><dt>Drawings</dt><dd>SB-SL-00-B/C/F/L/S-510301-000001<small>Rev. A00 "Til godkjenning" (for approval)</small></dd></div>
+          <div><dt>Role</dt><dd>Road Designer</dd></div>
+          <div><dt>Tools</dt><dd>Novapoint · Vehicle Tracking · Civil 3D · survey data</dd></div>
+          <div><dt>Standard</dt><dd>Håndbok N100 · design vehicle VT</dd></div>
+          <div><dt>Status</dt><dd>Issued November 2023 · approved by NPRA and in use in 2024</dd></div>
         </dl>
       </aside>
     </div>
 
+    <div class="figs">
+      <div class="fig"><b>22 m</b><span>VT truck and trailer, 12.5 m turning radius</span></div>
+      <div class="fig"><b>6 %</b><span>maximum grade, 4.3 m climb to the storage area</span></div>
+      <div class="fig"><b>6 × 115 m</b><span>sight lines in both directions along Rv. 555</span></div>
+      <div class="fig"><b>≈ 185 m</b><span>of access road from Rv. 555 to the storage area</span></div>
+    </div>
+    <div class="qty"><span>Quantities:</span><span>Footprint <b>2,128 m²</b></span><span>Paved <b>1,718 m²</b></span><span>Binder course <b>167 m³</b></span><span>Wearing course <b>168 m³</b></span><span>Soil cut <b>≈ 440 m³</b></span><span>Blasted-rock fill <b>≈ 400 m³</b></span></div>
+
     <div class="gallery">
+      <figure>
+        <div class="frame zoomable" role="button" tabindex="0" data-src="img/ext_plan_hd.jpg" data-w="1986" data-h="2234" data-title="EXT-01 · Overview plan, junction geometry" aria-label="Open the EXT-01 overview plan in full detail"><img src="img/ext_plan.jpg" alt="Overview plan of the access over the orthophoto with 12 m radii, 11 m throat and 7.3 m road width" loading="lazy"><span class="zoom-hint">⤢ Zoom</span></div>
+        <figcaption><b>Overview plan (B).</b> 12 m corner radii on both sides, 11.0 m throat at the junction and 7.35 m road width, drawn over the drone orthophoto. Select to zoom.</figcaption>
+        <div class="frame" style="margin-top:12px;background:#FFFFFF"><img src="img/ext_vt.jpg" alt="Dimensioned side view of the VT truck and trailer with its turning data" loading="lazy"></div>
+        <figcaption><b>Design vehicle VT (vogntog).</b> 9.3 m truck and 10.2 m trailer, 22.0 m overall, 2.6 m wide, 12.5 m kerb-to-kerb turning radius.</figcaption>
+      </figure>
+      <figure>
+        <div class="frame zoomable" role="button" tabindex="0" data-src="img/ext_swept_hd.jpg" data-w="1890" data-h="2880" data-title="EXT-01 · Swept paths, VT truck and trailer" aria-label="Open the VT swept-path drawing in full detail"><img src="img/ext_swept.jpg" alt="Swept paths of the VT truck and trailer turning in and out of Rv. 555 and along the access" loading="lazy"><span class="zoom-hint">⤢ Zoom</span></div>
+        <figcaption><b>Swept paths (S).</b> Wheel tracks (red) and vehicle body (green) of the VT turning in and out of Rv. 555 and through the curves of the access. Select to zoom.</figcaption>
+      </figure>
+      <figure>
+        <div class="frame"><img src="img/ext_signplan.jpg" alt="Sign plan over the orthophoto with the access sign 01 and road-works sign 02 on Rv. 555" loading="lazy"></div>
+        <figcaption><b>Sign plan (L).</b> At the access (01), motor vehicles prohibited except construction traffic; on Rv. 555, a road-works warning on each approach (02 here, 03 further north-east).</figcaption>
+        <div class="frame" style="margin-top:12px;background:#FFFFFF"><img src="img/ext_signs.jpg" alt="Sign list with sign numbers 306.10, 808.30 and 110.00, size MS, class 3 film" loading="lazy"></div>
+        <figcaption><b>Sign list.</b> Sign numbers, sizes and reflective film class as issued.</figcaption>
+      </figure>
+      <figure>
+        <div class="frame"><img src="img/ext_sight.jpg" alt="Sight lines of 6 by 115 m in both directions along Rv. 555 from the access" loading="lazy"></div>
+        <figcaption><b>Sight lines.</b> 6 × 115 m in both directions from the access along Rv. 555 (blue), kept clear for a driver waiting to pull out.</figcaption>
+      </figure>
       <figure class="wide">
-        <div class="frame"><img src="img/ta_section_existing.jpg" alt="Cross-section with the existing road retained under the new road" loading="lazy"></div>
-        <figcaption><b>Proposed principle.</b> Existing pavement (pink) kept under the widened road, new layers on top, 1:10 and 1:4 side slopes and the deep-blasting zone below.</figcaption>
-      </figure>
-      <figure>
-        <div class="frame"><img src="img/nova_3d_a.jpg" alt="3D road model in Novapoint with chainage labels" loading="lazy"></div>
-        <figcaption><b>Model review.</b> Novapoint model of a reviewed road, with chainages and the cut and fill surfaces checked for the claim.</figcaption>
-      </figure>
-      <figure>
-        <div class="frame"><img src="img/nova_xs.jpg" alt="Cross-section viewer showing terrain, road and missing layers" loading="lazy"></div>
-        <figcaption><b>Cross-section evidence.</b> Terrain, road surface and formation at one of the reviewed chainages.</figcaption>
+        <div class="profiles two"><div class="p-wide"><div class="prof-label">Plan and profile (C)<span>PK 0 – 186, vector</span></div><div class="prof zoomable" role="button" tabindex="0" data-src="img/ext_profile.svg" data-w="632" data-h="412" data-title="EXT-01 · Longitudinal profile" aria-label="Open the EXT-01 longitudinal profile in full detail"><div class="prof-crop" style="aspect-ratio:632/412"><img src="img/ext_profile.svg" alt="Longitudinal profile of the access: 0.35 percent then 6 percent climb with vertical curves" loading="lazy" style="width:100%;left:0;top:0"></div><span class="zoom-hint">⤢ Zoom</span></div></div><div class="p-wide"><div class="prof-label">Cross sections (F)<span>every 10 m, 21 sections, first two rows shown</span></div><div class="prof zoomable" role="button" tabindex="0" data-src="img/ext_sections.svg" data-w="1191" data-h="842" data-crop="84,46,1057,712" data-title="EXT-01 · Cross sections" aria-label="Open the EXT-01 cross sections in full detail"><div class="prof-crop" style="aspect-ratio:1057/304"><img src="img/ext_sections.svg" alt="Cross sections at PK 2.9 to 80 showing design surface against terrain" loading="lazy" style="width:112.677%;left:-7.947%;top:-15.132%"></div><span class="zoom-hint">⤢ Zoom</span></div></div></div>
+        <figcaption><b>Profile and cross sections, vector from the drawing set.</b> Grade line over terrain with vertical curve radii, horizontal curve and crossfall bands, and the design surface (blue) against the terrain in each section. Select to zoom.</figcaption>
       </figure>
     </div>
-    <p class="note-block"><span class="idea">una vista en planta de las tres vías marcando en colores "se conserva / se ensancha / se reperfila" (lo que pidió NPRA para la Rev. 1) haría el proyecto entendible en 5 segundos. Si me compartes la carpeta de la Rev. 1, la preparo.</span></p>
+
+    <h3 class="sub-h">Mass balance</h3>
+    <p class="mb-lead">Calculated from the 3D design model against the drone survey of the site.</p>
+    <div class="mbal" role="img" aria-label="Cut about 440 cubic metres, fill about 400 cubic metres">
+      <div class="mrow"><span class="ml">Cut<small>ordinary soil</small></span><span class="mbar"><i style="width:100%;background:#A9503F"></i></span><b>≈ 440 m³</b></div>
+      <div class="mrow"><span class="ml">Fill<small>blasted rock</small></span><span class="mbar"><i style="width:90.9%;background:#265C8C"></i></span><b>≈ 400 m³</b></div>
+    </div>
+    <div class="qty"><span>Asphalt, 2 × 100 mm <b>335 m³</b></span><span>Paved area <b>1,718 m²</b></span><span>Footprint <b>2,128 m²</b></span></div>
   </div>
 </article>
+
 
 <!-- ================= 06 GIS ================= -->
 <article class="project" id="gis" aria-labelledby="gis-t">
@@ -672,15 +785,15 @@ figcaption b{color:var(--ink);font-weight:600}
   </div>
   <div class="wrap">
     <div class="crumbs"><span>Infrastructure &amp; planning</span><span>GIS</span><span>BIM coordination</span><span class="here">Rv. 555, 11 construction areas</span></div>
-    <div class="pn"><a href="#a03">Previous</a><a href="#profile">Profile</a></div>
+    <div class="pn"><a href="#ext">Previous</a><a href="#profile">Profile</a></div>
     <div class="grid-3">
       <div class="prose">
         <p class="lead">Turning hundreds of separate road models into maps and coordination models that owners, planners and site teams can use.</p>
         <p>The road network on Sotrasambandet is delivered as roughly 250 road models across eleven construction areas, from the main highway to footpaths, roundabouts and private accesses. The future owners, from the state and Vestland County to the municipalities and private landowners, need to know what they will receive, and site teams need to know what gets built in each phase.</p>
         <p>I built a GIS layer of every road as polygons, classified by road type, owner and construction phase (1A, 1B, 2A, 2B), converting CAD hatches into GIS polygons with my own AutoLISP routine and publishing them as shapefiles and a QGIS project. For Vestland County I assembled Navisworks coordination models per area, combining the road models with terrain surfaces clipped to the project limits. A Dynamo script extracts start and end chainages for all alignments, about 57 km of road axes, for planning and quantities.</p>
-        <p><span class="todo">para qué se usó (entrega a propietarios, permisos Bergen kommune…) y quién lo usa hoy</span></p>
+        <p>Today it is my own reference for the roads I am responsible for. It answers questions from other departments, shows at a glance which roads have open issues and what their characteristics are, and gives me a reliable visual source to use in meetings and when explaining the road network.</p>
       </div>
-      <aside class="facts on-dark" aria-label="Project facts">
+      <aside class="facts" aria-label="Project facts">
         <dl>
           <div><dt>Location</dt><dd>Rv. 555, Bergen &amp; Øygarden</dd></div>
           <div><dt>Users</dt><dd>NPRA · Vestland County · site and planning teams</dd></div>
@@ -692,7 +805,7 @@ figcaption b{color:var(--ink);font-weight:600}
 
     <div class="chart" style="margin-top:clamp(28px,4vw,44px)">
       <h4>245 road models by future owner</h4>
-      <p>Road-type classification of every road IFC model, May 2026.</p>
+      <p>One example of what the GIS holds: the road-type classification of every road model, May 2026. The same database stores much more information for each road.</p>
       <div class="owners" role="img" aria-label="National 88, County 71, Private 34, Municipal 29, Other or mixed 23">
         <div style="width:35.9%;background:var(--red)"></div>
         <div style="width:29.0%;background:var(--ink)"></div>
@@ -719,7 +832,6 @@ figcaption b{color:var(--ink);font-weight:600}
         <figcaption><b>Sheet 3 of 6.</b> Interchange area, where several owners and phases meet.</figcaption>
       </figure>
     </div>
-    <p class="note-block"><span class="idea">estos planos salen de AutoCAD con fondo gris y se ven técnicos. Puedo generar un mapa más limpio directamente desde tu proyecto QGIS (Project_GIS_Layers.qgz), coloreado por propietario y con ortofoto de fondo, usando el conector de QGIS de tu computadora.</span></p>
   </div>
 </article>
 
@@ -728,14 +840,16 @@ figcaption b{color:var(--ink);font-weight:600}
   <div class="wrap">
     <h2 class="sec-title">Profile</h2>
     <div class="grid-3">
-      <div class="prose">
-        <p class="lead">Day to day, as Discipline Leader for Roads, I review and direct the work of three designers and own the road discipline's paperwork with site and client.</p>
-        <p>That means field change requests, work inspection requests and geometric controls in Dalux, F-issues, RFIs and technical clarifications with NPRA, the review of the roads bill of quantities, and Python and Dynamo tools that take quantities straight from the models. Most of it comes down to the same question: does what is drawn match what can be built, and what the contract says?</p>
-        <p><span class="todo">cifras: nº de FCR, WIR, RFI y TA gestionados desde dic. 2025</span> <span class="idea">una foto profesional aquí o en la portada.</span></p>
+      <div class="prof-intro">
+        <img class="me" src="img/bryan.jpg" alt="Portrait of Bryan Naranjo Hernández" width="720" height="900" loading="lazy">
+        <div class="prose">
+          <p class="lead">Day to day, as Discipline Leader for Roads, I lead a team of three road designers and review their designs before they go to site and to the client.</p>
+          <p>I design temporary and permanent roads, detours, site accesses and work platforms: alignments, profiles, grading, earthworks, drainage and hydrology, from the first concept to the drawings and 3D models for construction. I work in Civil 3D, Novapoint and QGIS, and I use Python and Dynamo to automate design tasks.</p>
+        </div>
       </div>
-      <aside class="facts on-dark" aria-label="Software">
+      <aside class="facts" aria-label="Software">
         <dl>
-          <div><dt>Design</dt><dd>Civil 3D · Novapoint / Quadri · Revit <span class="todo">¿InfraWorks, HEC-RAS, HEC-HMS o PCSWMM?</span></dd></div>
+          <div><dt>Design</dt><dd>Civil 3D · InfraWorks · InfoDrainage · Novapoint / Quadri · Revit</dd></div>
           <div><dt>Coordination</dt><dd>Navisworks · IFC · LandXML · ACC · Aconex · Dalux</dd></div>
           <div><dt>GIS &amp; code</dt><dd>QGIS · Python · Dynamo · AutoLISP</dd></div>
           <div><dt>Traffic</dt><dd>SUMO</dd></div>
@@ -764,7 +878,7 @@ figcaption b{color:var(--ink);font-weight:600}
     </div>
     <div class="foot">
       <span><b>Bryan Naranjo Hernández</b> · Portfolio 2026</span>
-      <span>Sotrasambandet drawings and models are shown as examples of my own work on the project. <span class="todo">autorización de Sotra Link / Webuild para mostrar estos planos</span></span>
+      <span>Sotrasambandet drawings and models are shown as examples of my own work on the project.</span>
     </div>
   </div>
 </section>
@@ -772,7 +886,7 @@ figcaption b{color:var(--ink);font-weight:600}
 <script>
 (function(){
   var btn=document.getElementById('notesToggle');
-  btn.addEventListener('click',function(){
+  if(btn) btn.addEventListener('click',function(){
     var hidden=document.body.classList.toggle('hide-notes');
     btn.textContent=hidden?'Mostrar notas':'Ocultar notas';
     btn.setAttribute('aria-pressed',hidden?'true':'false');

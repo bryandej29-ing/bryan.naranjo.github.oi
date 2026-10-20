@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Portfolio of Bryan Naranjo Hernández, civil engineer: road design, detours, earthworks, GIS/BIM and complete streets.">
+<title>Bryan Naranjo · Portfolio</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23372D2D'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EBN%3C/text%3E%3Crect x='0' y='56' width='64' height='8' fill='%23B7342D'/%3E%3C/svg%3E">
+<style>[hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+<style>
+/* Layout: Sherwood-style pages. Cover = dark fact-box panel beside a mosaic of the six projects;
+   each project = full-bleed image band with uppercase title, red tags, 2/3 narrative + 1/3 dark facts,
+   then a captioned drawing gallery. Single light look on purpose; every color set explicitly. */
+:root{
+  --bg:#FFFFFF;
+  --panel:#F3F1F0;
+  --ink:#372D2D;
+  --text:#241E1E;
+  --muted:#776D6C;
+  --grey:#9B9B9B;
+  --rule:#D9D3D2;
+  --red:#B7342D;
+  --red-deep:#932923;
+  --red-tint:#F5E4E2;
+  --idea-tint:#ECEFF0;
+  --idea-ink:#2F4A56;
+  --on-dark:#FFFFFF;
+  --on-dark-soft:#D9D0CF;
+  --chart-2:#8C8180;
+  --chart-3:#C8BFBE;
+  --chart-4:#E2B1AC;
+  --font:"Montserrat","Helvetica Neue",Arial,sans-serif;
+  --w:1180px;
+  --gutter:clamp(16px,4vw,40px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-weight:400;font-size:15.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--red);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.wrap{max-width:var(--w);margin-inline:auto;padding-inline:var(--gutter)}
+.caps{text-transform:uppercase;letter-spacing:.1em;font-weight:700}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{margin:0}
+
+/* ---------- notes for Bryan (remove before sending) ---------- */
+.todo,.idea{display:inline;border-radius:3px;padding:1px 6px;font-size:.86em;font-weight:500;line-height:1.9;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.todo{background:var(--red-tint);color:var(--red-deep);border:1px dashed var(--red)}
+.todo::before{content:"PENDIENTE · ";font-weight:700;letter-spacing:.06em}
+.idea{background:var(--idea-tint);color:var(--idea-ink);border:1px dashed var(--idea-ink)}
+.idea::before{content:"IDEA PARA SUMAR VALOR · ";font-weight:700;letter-spacing:.06em}
+.on-dark .todo{background:rgba(255,255,255,.12);color:#FFD9D4;border-color:#F0A69E}
+body.hide-notes .todo,body.hide-notes .idea,body.hide-notes .note-block{display:none}
+.note-block{display:block;margin-top:18px}
+.notes-toggle{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;opacity:.92;background:var(--ink);color:var(--on-dark);border:0;border-radius:2px;font:600 12px/1 var(--font);letter-spacing:.08em;text-transform:uppercase;padding:12px 14px;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.notes-toggle:hover{background:var(--red)}
+
+/* ---------- cover: dark panel + project mosaic ---------- */
+.cover{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);background:var(--ink);color:var(--on-dark);min-height:clamp(560px,52vw,680px)}
+@media (max-width:900px){.cover{grid-template-columns:minmax(0,1fr)}}
+.cover-panel{display:flex;flex-direction:column;justify-content:space-between;gap:48px;padding:26px clamp(18px,3.4vw,44px) clamp(32px,4vw,52px)}
+.topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.mark{display:flex;flex-direction:column;line-height:1.15}
+.mark b{font-size:22px;letter-spacing:.06em;font-weight:700}
+.mark span{font-size:11px;letter-spacing:.32em;font-weight:500;color:var(--on-dark-soft);margin-top:4px}
+.nav{display:flex;gap:18px;flex-wrap:wrap;padding-top:6px}
+.nav a{color:var(--on-dark);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.cover-body{display:grid;gap:18px;justify-items:start}
+.btn-tag{display:inline-block;background:var(--red);color:var(--on-dark);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:13px 20px}
+.btn-tag:hover{text-decoration:none;background:var(--red-deep)}
+.cover h1{font-size:clamp(28px,3.5vw,44px);line-height:1.14;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+.cover .lede{max-width:46ch;font-size:clamp(15px,1.4vw,17px);font-weight:300;color:#F2ECEB}
+.cover-index{list-style:none;margin:6px 0 0;padding:14px 0 0;border-top:1px solid rgba(255,255,255,.2);display:grid;gap:6px;width:100%;font-size:13px}
+.cover-index a{display:grid;grid-template-columns:34px 1fr;color:var(--on-dark-soft)}
+.cover-index a b{color:var(--red);font-weight:700;letter-spacing:.06em}
+.cover-index a:hover{color:var(--on-dark);text-decoration:none}
+
+.mosaic{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:1fr 1fr .9fr;gap:3px;background:var(--ink);min-height:420px}
+.tile{position:relative;overflow:hidden;display:block;background:#4A3E3E;color:var(--on-dark)}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.tile:hover img{transform:scale(1.05)}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,14,14,0) 55%,rgba(20,14,14,.78) 100%)}
+.tile span{position:absolute;left:12px;bottom:10px;z-index:1;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.tile span b{color:#FFB8B0;margin-right:6px}
+.tile:hover{text-decoration:none}
+.t-a{grid-column:1/3;grid-row:1/3}
+.t-f{grid-column:3/5;grid-row:1/2}
+.t-b{grid-column:3/4;grid-row:2/3}
+.t-e{grid-column:4/5;grid-row:2/3}
+.t-c{grid-column:1/3;grid-row:3/4}
+.t-d{grid-column:3/5;grid-row:3/4}
+@media (max-width:560px){.mosaic{min-height:360px}.tile span{font-size:10px;left:8px;bottom:6px}}
+
+.catbar{background:var(--panel)}
+.catbar .wrap{display:flex;flex-wrap:wrap;gap:6px 26px;align-items:center;justify-content:space-between;padding-block:16px}
+.catbar .caps{color:var(--red);font-size:13px}
+.catbar .meta{font-size:13px;color:var(--muted)}
+
+/* ---------- generic section ---------- */
+section{padding-block:clamp(48px,7vw,84px)}
+.sec-title{font-size:clamp(20px,2.4vw,26px);letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--text);margin-bottom:28px}
+.grid-3{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:clamp(24px,4vw,48px);align-items:start}
+@media (max-width:860px){.grid-3{grid-template-columns:minmax(0,1fr)}}
+.prose{display:grid;gap:16px;max-width:66ch;color:var(--ink)}
+.prose .lead{font-size:clamp(17px,1.9vw,20px);font-weight:300;line-height:1.6;color:var(--text)}
+
+.facts{background:var(--ink);color:var(--on-dark);padding:26px 26px 22px}
+.facts dl{margin:0;display:grid;gap:16px}
+.facts dt{font-size:12.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+.facts dd{margin:4px 0 0;font-weight:300;font-size:15px;line-height:1.55;color:#F4EFEE}
+.facts dd small{display:block;color:var(--on-dark-soft);font-size:13px}
+
+/* role match */
+.match-scroll{overflow-x:auto;border-top:1px solid var(--grey)}
+table.match{border-collapse:collapse;width:100%;min-width:760px;font-size:14px}
+.match th,.match td{padding:11px 10px;border-bottom:1px solid var(--rule);text-align:center}
+.match thead th{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--muted);vertical-align:bottom}
+.match thead th a{color:var(--red)}
+.match thead small{display:block;font-weight:500;letter-spacing:.06em;color:var(--muted);margin-top:2px}
+.match tbody th{text-align:left;font-weight:600;color:var(--ink)}
+.dot{display:inline-block;width:11px;height:11px;border-radius:50%;background:var(--red)}
+.dot.half{background:transparent;border:2px solid var(--red)}
+.legend{display:flex;gap:22px;flex-wrap:wrap;margin-top:14px;font-size:13px;color:var(--muted);align-items:center}
+.legend span{display:inline-flex;gap:8px;align-items:center}
+
+/* featured cards: 5 projects -> first card wide */
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:980px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.cards{grid-template-columns:minmax(0,1fr)}}
+.card{position:relative;display:block;aspect-ratio:4/3;overflow:hidden;background:var(--ink);color:var(--on-dark)}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.card:hover img{transform:scale(1.04)}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(20,14,14,.82) 100%)}
+.card .cap{position:absolute;left:18px;right:18px;bottom:16px;z-index:1;display:grid;gap:2px}
+.card .cap b{font-size:16px;line-height:1.3;font-weight:700}
+.card .cap span{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--on-dark-soft)}
+.card:hover{text-decoration:none}
+
+/* ---------- project ---------- */
+.project{padding-block:0 clamp(56px,8vw,96px);border-top:1px solid var(--rule)}
+.p-hero{position:relative;min-height:clamp(240px,34vw,380px);display:flex;align-items:flex-end;background:var(--ink) center/cover no-repeat;color:var(--on-dark)}
+.p-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,14,14,.15) 30%,rgba(20,14,14,.75) 100%)}
+.p-hero .wrap{position:relative;width:100%;padding-block:28px}
+.p-hero .idx{font-size:12px;letter-spacing:.2em;font-weight:600;color:var(--on-dark-soft)}
+.p-hero h2{font-size:clamp(24px,3.8vw,42px);letter-spacing:.09em;line-height:1.15;text-transform:uppercase;font-weight:700;margin-top:6px}
+.crumbs{display:flex;flex-wrap:wrap;gap:6px 20px;padding-block:16px 6px}
+.crumbs span{color:var(--red);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.crumbs span.here{color:var(--grey)}
+.pn{display:flex;justify-content:space-between;border-top:1px solid var(--grey);margin-top:10px;padding-top:16px;margin-bottom:34px}
+.pn a{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+
+.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:clamp(28px,4vw,44px);border-top:1px solid var(--grey);border-bottom:1px solid var(--grey)}
+.fig{padding:18px 18px 16px 0}
+.fig + .fig{padding-left:18px;border-left:1px solid var(--rule)}
+@media (max-width:560px){.fig + .fig{border-left:0;padding-left:0;border-top:1px solid var(--rule)}}
+.fig b{display:block;font-size:clamp(24px,2.8vw,32px);font-weight:600;color:var(--red);line-height:1.15;font-variant-numeric:tabular-nums}
+.fig span{display:block;font-size:13px;color:var(--muted);line-height:1.45;margin-top:4px}
+
+.qty{display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:20px;font-size:13.5px;color:var(--muted)}
+.qty b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:clamp(28px,4vw,44px)}
+.gallery .wide{grid-column:1/-1}
+@media (max-width:760px){.gallery{grid-template-columns:minmax(0,1fr)}}
+figure{margin:0;display:grid;gap:10px;align-content:start}
+figure .frame{background:var(--panel);border:1px solid var(--rule);overflow:hidden}
+figure .frame img{width:100%;height:auto}
+figcaption{font-size:13px;line-height:1.55;color:var(--muted);max-width:72ch}
+figcaption b{color:var(--ink);font-weight:600}
+
+/* before / after */
+.ba{position:relative;max-width:100%;overflow:hidden;background:var(--panel);border:1px solid var(--rule);--pos:50%}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ba .after{clip-path:inset(0 0 0 var(--pos))}
+.ba .line{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;margin-left:-1.5px;background:var(--on-dark);box-shadow:0 0 0 1px rgba(0,0,0,.25);pointer-events:none}
+.ba .knob{position:absolute;top:50%;left:var(--pos);width:42px;height:42px;margin:-21px 0 0 -21px;border-radius:50%;background:var(--red);color:var(--on-dark);display:grid;place-items:center;font:700 14px/1 var(--font);pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.ba .tag{position:absolute;top:12px;background:rgba(20,14,14,.78);color:var(--on-dark);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:7px 10px;pointer-events:none}
+.ba .tag.l{left:12px}.ba .tag.r{right:12px;background:var(--red)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba:focus-within{outline:2px solid var(--red);outline-offset:3px}
+
+.chart{background:var(--bg);border:1px solid var(--rule);padding:18px 18px 14px}
+.chart h4{margin:0 0 4px;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--ink)}
+.chart p{font-size:13px;color:var(--muted);margin-bottom:6px}
+.owners{display:flex;height:34px;margin-top:12px;overflow:hidden}
+.owners div{height:100%}
+.owner-key{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px 18px;margin-top:12px;font-size:13px;color:var(--muted)}
+.owner-key b{display:block;color:var(--ink);font-size:18px;font-weight:600;font-variant-numeric:tabular-nums}
+.owner-key i{display:inline-block;width:10px;height:10px;margin-right:6px}
+
+/* zoomable drawings + longitudinal profiles */
+.zoomable{position:relative;cursor:zoom-in}
+.zoomable:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.zoom-hint{position:absolute;top:10px;right:10px;z-index:2;background:var(--ink);color:var(--on-dark);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 9px;pointer-events:none}
+.profiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.profiles.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.profiles .p-wide{grid-column:1/-1}
+@media (max-width:760px){.profiles,.profiles.two{grid-template-columns:minmax(0,1fr)}}
+.prof-label{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:6px}
+.prof-label span{color:var(--muted);font-weight:500;letter-spacing:.04em;text-transform:none;margin-left:6px}
+.prof-crop{position:relative;overflow:hidden;background:#FFFFFF;border:1px solid var(--rule)}
+.prof-crop img{position:absolute;max-width:none;height:auto}
+
+/* drawing viewer */
+.lb{position:fixed;inset:0;z-index:60;background:rgba(28,22,22,.97);display:flex;flex-direction:column}
+.lb-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:calc(10px + env(safe-area-inset-top,0px)) 16px 10px;color:var(--on-dark)}
+.lb-title{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.lb-tools{display:flex;gap:6px}
+.lb-tools button{background:rgba(255,255,255,.08);color:var(--on-dark);border:1px solid rgba(255,255,255,.28);font:600 13px/1 var(--font);padding:9px 12px;min-width:42px;cursor:pointer}
+.lb-tools button:hover{background:var(--red);border-color:var(--red)}
+.lb-stage{position:relative;flex:1;overflow:hidden;background:#FFFFFF;touch-action:none;cursor:grab}
+.lb-stage.dragging{cursor:grabbing}
+.lb-stage img{position:absolute;max-width:none;user-select:none;-webkit-user-drag:none}
+.lb-help{color:var(--on-dark-soft);font-size:12px;padding:8px 16px calc(8px + env(safe-area-inset-bottom,0px))}
+
+/* profile */
+.timeline{display:grid;margin-top:30px;border-top:1px solid var(--grey)}
+.tl{display:grid;grid-template-columns:150px minmax(0,1fr);gap:18px;padding-block:16px;border-bottom:1px solid var(--rule)}
+@media (max-width:560px){.tl{grid-template-columns:minmax(0,1fr);gap:4px}}
+.tl .when{font-size:13px;font-weight:600;color:var(--red);letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.tl h3{font-size:15.5px;font-weight:600;color:var(--text)}
+.tl p{font-size:14px;color:var(--muted)}
+
+/* contact */
+.contact{background:var(--ink);color:var(--on-dark)}
+.contact .sec-title{color:var(--on-dark)}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.contact dt{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-soft)}
+.contact dd{margin:6px 0 0;font-size:16px;font-weight:300;user-select:all;word-break:break-word}
+.contact dl{margin:0}
+.foot{border-top:1px solid rgba(255,255,255,.18);margin-top:44px;padding-top:20px;font-size:12.5px;color:var(--on-dark-soft);display:grid;gap:8px}
+.foot b{letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--on-dark)}
+</style>
+</head>
+<body>
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-labelledby="lbTitle">
+  <div class="lb-bar"><span class="lb-title" id="lbTitle">Drawing</span>
+    <div class="lb-tools"><button type="button" data-act="out" aria-label="Zoom out">−</button><button type="button" data-act="in" aria-label="Zoom in">+</button><button type="button" data-act="fit">Fit</button><button type="button" data-act="close" id="lbClose">Close ✕</button></div></div>
+  <div class="lb-stage" id="lbStage"><img id="lbImg" alt=""></div>
+  <div class="lb-help">Scroll or pinch to zoom · drag to move · double-click to zoom in · Esc to close</div>
+</div>
+
+<button class="notes-toggle" id="notesToggle" type="button" aria-pressed="false">Ocultar notas</button>
+
+<!-- ================= COVER ================= -->
+<header class="cover" id="top">
+  <div class="cover-panel on-dark">
+    <div class="topbar">
+      <div class="mark"><b>BRYAN NARANJO</b><span>CIVIL ENGINEER · ROADS</span></div>
+      <nav class="nav" aria-label="Sections">
+        <a href="#projects">Projects</a>
+        <a href="#profile">Profile</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="cover-body">
+      <a class="btn-tag" href="#projects">Selected work 2023–2026</a>
+      <h1>Roads, earthworks &amp; complete streets</h1>
+      <p class="lede">Portfolio of Bryan Naranjo Hernández, Discipline Leader for Roads on the Sotrasambandet PPP in Bergen, Norway.</p>
+      <ol class="cover-index" aria-label="Projects">
+        <li><a href="#rn2"><b>01</b>Complete Street on National Route 2</a></li>
+        <li><a href="#k206"><b>02</b>K206 Roundabout Detour</a></li>
+        <li><a href="#sto"><b>03</b>Storavatnet Temporary Roundabout</a></li>
+        <li><a href="#kip"><b>04</b>Kiplevatnet Grouting Platform</a></li>
+        <li><a href="#a03"><b>05</b>Rebuilding Roads That Stay in Service</a></li>
+        <li><a href="#gis"><b>06</b>GIS &amp; BIM for 245 Road Models</a></li>
+      </ol>
+    </div>
+  </div>
+  <div class="mosaic">
+    <a class="tile t-a" href="#k206"><img src="img/k206_built_crop.jpg" alt="Aerial photo of the K206 detour roundabout after construction"><span><b>02</b>K206 detour</span></a>
+    <a class="tile t-f" href="#sto"><img src="img/t5_3d_a.jpg" alt="3D model of the Storavatnet temporary roundabout on the photogrammetric mesh"><span><b>03</b>Storavatnet</span></a>
+    <a class="tile t-b" href="#kip"><img src="img/kip_zoom.jpg" alt="Plan of the Kiplevatnet work platform with lagoons and plant area"><span><b>04</b>Kiplevatnet</span></a>
+    <a class="tile t-e" href="#gis"><img src="img/sotra_phases_c.jpg" alt="Map of roads coloured by construction phase"><span><b>06</b>GIS</span></a>
+    <a class="tile t-c" href="#rn2"><img src="img/hero.jpg" alt="Aerial plan of the proposed complete street on Route 2"><span><b>01</b>Route 2</span></a>
+    <a class="tile t-d" href="#a03"><img src="img/nova_3d_a.jpg" alt="3D road model in Novapoint"><span><b>05</b>Area 03</span></a>
+  </div>
+</header>
+
+<div class="catbar">
+  <div class="wrap">
+    <span class="caps">Application · Civil – Project Engineer · San José, Costa Rica</span>
+    <span class="meta">Civil 3D · Novapoint · Navisworks · QGIS · Python / Dynamo</span>
+  </div>
+</div>
+
+<!-- ================= INTRO ================= -->
+<section id="intro">
+  <div class="wrap grid-3">
+    <div class="prose">
+      <p class="lead">I design roads and the ground they sit on, and I like the part where a drawing has to survive contact with the site.</p>
+      <p>For more than three years I have worked for the design-build contractor on Sotrasambandet, a €1 billion+ public-private partnership that replaces the road link between Bergen and the island of Sotra while it stays open to traffic. I started as a BIM engineer drawing temporary roads and work platforms, became Project Engineer for Roads, and since December 2025 I lead the road discipline: a team of three designers, plus the field change requests, inspection requests, RFIs and technical clarifications that pass between site, designers and the Norwegian Public Roads Administration.</p>
+      <p>Before Norway I modelled MEP, architecture and structures in Madrid, and for my master's thesis I redesigned a 1.5 km stretch of National Route 2 in Pérez Zeledón as a complete street. The six projects below show how I handle road design, grading and earthworks, drainage and utilities, GIS and coordination with the people who build.</p>
+    </div>
+    <aside class="facts on-dark" aria-label="Key facts">
+      <dl>
+        <div><dt>Based in</dt><dd>Bergen, Norway<small>Relocating to San José, Costa Rica · <span class="todo">fecha de inicio disponible</span></small></dd></div>
+        <div><dt>Current role</dt><dd>Discipline Leader, Roads<small>Sotra Link Construction JV (Webuild · FCC · SK ecoplant)</small></dd></div>
+        <div><dt>Education</dt><dd>Licentiate in Construction Engineering, TEC<small>MSc BIM, IDESIE · MSc Smart Mobility, Structuralia / Univ. Isabel I</small></dd></div>
+        <div><dt>Languages</dt><dd>Spanish (native) · English (advanced)</dd></div>
+        <div><dt>Credentials</dt><dd>Costa Rican &amp; US citizen · B1 driver's licence<small>CFIA membership in process</small></dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<!-- ================= ROLE MATCH ================= -->
+<section id="match" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="sec-title">Where each requirement shows up</h2>
+    <div class="match-scroll" role="region" aria-label="Requirements by project" tabindex="0">
+      <table class="match">
+        <thead>
+          <tr>
+            <th scope="col" style="text-align:left">From the job description</th>
+            <th scope="col"><a href="#rn2">01</a><small>Route 2</small></th>
+            <th scope="col"><a href="#k206">02</a><small>K206 detour</small></th>
+            <th scope="col"><a href="#sto">03</a><small>Storavatnet</small></th>
+            <th scope="col"><a href="#kip">04</a><small>Platform</small></th>
+            <th scope="col"><a href="#a03">05</a><small>Area 03</small></th>
+            <th scope="col"><a href="#gis">06</a><small>GIS / BIM</small></th>
+            <th scope="col"><a href="#profile">Daily</a><small>Disc. Leader</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Road design</th><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td></tr>
+          <tr><th scope="row">Site grading &amp; earthworks</th><td></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td></td><td></td></tr>
+          <tr><th scope="row">Earthwork calculations</th><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td></tr>
+          <tr><th scope="row">Drainage</th><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td></td><td></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td></td><td></td></tr>
+          <tr><th scope="row">Utility layout</th><td></td><td></td><td></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td></td><td></td></tr>
+          <tr><th scope="row">Civil 3D &amp; other civil software</th><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td></td></tr>
+          <tr><th scope="row">Costs &amp; feasibility</th><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td></td><td></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td></tr>
+          <tr><th scope="row">GIS</th><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td></td><td></td><td></td><td></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td></td></tr>
+          <tr><th scope="row">Construction phasing &amp; traffic management</th><td></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td></td></tr>
+          <tr><th scope="row">Coordinating design &amp; construction teams</th><td></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td></tr>
+          <tr><th scope="row">Construction inspection &amp; quality</th><td></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td></td><td></td><td></td><td></td><td><i class="dot" role="img" aria-label="main focus"></i></td></tr>
+          <tr><th scope="row">Pedestrians, transit &amp; sustainable design</th><td><i class="dot" role="img" aria-label="main focus"></i></td><td><i class="dot" role="img" aria-label="main focus"></i></td><td></td><td></td><td><i class="dot half" role="img" aria-label="part of the work"></i></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="legend"><span><i class="dot"></i> Main focus of the project</span><span><i class="dot half"></i> Part of the work</span></div>
+  </div>
+</section>
+
+<!-- ================= FEATURED ================= -->
+<section id="projects" style="background:var(--panel)">
+  <div class="wrap">
+    <h2 class="sec-title">Featured projects</h2>
+    <div class="cards">
+      <a class="card" href="#rn2"><img src="img/rn2_s05.jpg" alt="Aerial plan of a proposed roundabout on National Route 2" loading="lazy"><div class="cap"><span>Pérez Zeledón, Costa Rica</span><b>Complete Street on National Route 2</b></div></a>
+      <a class="card" href="#k206"><img src="img/k206_built.jpg" alt="Aerial photo of the built K206 detour" loading="lazy"><div class="cap"><span>Bildøy, Norway · built 2026</span><b>K206 Roundabout Detour</b></div></a>
+      <a class="card" href="#sto"><img src="img/t5_3d_b.jpg" alt="3D model of the Storavatnet temporary roundabout" loading="lazy"><div class="cap"><span>Storavatnet, Bergen · 2026</span><b>Storavatnet Temporary Roundabout</b></div></a>
+      <a class="card" href="#kip"><img src="img/kip_3d.jpg" alt="3D model of the Kiplevatnet work platform" loading="lazy"><div class="cap"><span>Drotningsvik, Norway</span><b>Kiplevatnet Grouting Platform</b></div></a>
+      <a class="card" href="#a03"><img src="img/nova_3d_a.jpg" alt="3D road model with cut and fill slopes" loading="lazy"><div class="cap"><span>Bildøy, Norway</span><b>Rebuilding Roads That Stay in Service</b></div></a>
+      <a class="card" href="#gis"><img src="img/sotra_phases_c.jpg" alt="Map of roads coloured by construction phase" loading="lazy"><div class="cap"><span>Rv. 555, 11 areas</span><b>GIS &amp; BIM for 245 Road Models</b></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= P1 ================= -->
+<article class="project" id="rn2" aria-labelledby="rn2-t">
+  <div class="p-hero" style="background-image:url('img/rn2_s05.jpg')">
+    <div class="wrap"><div class="idx">PROJECT 01</div><h2 id="rn2-t">Complete Street on National Route 2</h2></div>
+  </div>
+  <div class="wrap">
+    <div class="crumbs"><span>Transportation | Streets</span><span>Smart mobility</span><span class="here">Pérez Zeledón, Costa Rica</span></div>
+    <div class="pn"><a href="#projects">All projects</a><a href="#k206">Next</a></div>
+    <div class="grid-3">
+      <div class="prose">
+        <p class="lead">A 1.5 km redesign of the Inter-American Highway through San Isidro de El General, turning a four-lane, car-first corridor into a street for people who walk, cycle, take the bus and drive.</p>
+        <p>National Route 2 crosses the urban core of Pérez Zeledón with a two-way centre turn lane, dozens of uncontrolled accesses and no room for bicycles. COSEVI crash maps put the canton's worst clusters on this stretch. Using municipal counts (MDPZ, 2021), aerial imagery and field visits, I mapped every vehicle conflict point and designed a complete-street alternative.</p>
+        <p>The design removes all left turns along the corridor and concentrates turning movements in two roundabouts. Lanes narrow to 3.25 m, enough for the articulated design truck with 0.65 m between vehicles, and below the 3.65 m the SIECA manual prefers, as a deliberate traffic-calming measure. Each side gets a 2.0 m protected bike lane behind a 10 cm curb, a 2.5 m sidewalk and a planted strip of shade trees in a valley where temperatures run from 19 to 30 °C. Crossings follow the desire lines seen on site, and 2,120 m of open roadside ditch become buried storm pipe.</p>
+        <p>I modelled the corridor in Civil 3D, ran SUMO micro-simulations for today's traffic and for 2035, and priced two scenarios, with and without two 140 m grade separations, including a social payback based on crash costs. The simulations also showed the limit of the design: without better transit and a heavy-vehicle bypass, the travel-time gains fade within ten years.</p>
+      </div>
+      <aside class="facts on-dark" aria-label="Project facts">
+        <dl>
+          <div><dt>Location</dt><dd>San Isidro de El General, Pérez Zeledón, Costa Rica</dd></div>
+          <div><dt>Type</dt><dd>Master's thesis, conceptual design<small>MSc Smart Mobility · Structuralia / Univ. Isabel I</small></dd></div>
+          <div><dt>Role</dt><dd>Sole author: diagnosis, geometric design, simulation and cost estimate</dd></div>
+          <div><dt>Tools</dt><dd>Civil 3D · SUMO · Excel</dd></div>
+          <div><dt>References</dt><dd>SIECA · AASHTO · Inclusive Mobility (UK DfT)</dd></div>
+          <div><dt>Status</dt><dd>Completed February 2025 <span class="todo">nota / mención obtenida</span></dd></div>
+        </dl>
+      </aside>
+    </div>
+
+    <div class="figs">
+      <div class="fig"><b>1.5 km</b><span>urban corridor with a 24.0 m typical section</span></div>
+      <div class="fig"><b>92 → 29</b><span>vehicle conflict points (−68.5 %)</span></div>
+      <div class="fig"><b>−50 %</b><span>travel time in year one (SUMO), converging again by 2035</span></div>
+      <div class="fig"><b>US$&nbsp;8.5–23.1&nbsp;M</b><span>two cost scenarios, with and without grade separations</span></div>
+    </div>
+    <div class="qty"><span>Roadway <b>31,750 m²</b></span><span>Sidewalks <b>14,520 m²</b></span><span>Bike lanes <b>5,020 m²</b></span><span>Curbs <b>7,950 m</b></span><span>Green areas <b>735 m²</b></span><span>Trees <b>140</b></span><span>Land acquisition <b>4,000 m²</b></span></div>
+
+    <div class="gallery">
+      <figure class="wide">
+        <div class="ba" id="ba1" style="aspect-ratio:1600/1156">
+          <img src="img/rn2_s01_old.jpg" alt="Section 01 today, with uncontrolled access points marked" loading="lazy">
+          <img class="after" src="img/rn2_s01_new.jpg" alt="Section 01 as proposed, with bike lanes, sidewalks, trees and crossings" loading="lazy">
+          <span class="line"></span><span class="knob" aria-hidden="true">⇆</span>
+          <span class="tag l">Existing conflicts</span><span class="tag r">Proposed</span>
+          <input type="range" min="0" max="100" value="50" aria-label="Compare existing and proposed design of Section 01">
+        </div>
+        <figcaption><b>Section 01, before and after.</b> Drag to compare. Left: the existing four-lane road with a centre turn lane and an uncontrolled access strip (red). Right: left turns removed, protected bike lanes, wider sidewalks, a tree strip and formal crossings. <span class="todo">fuente / crédito de la ortofoto (¿vuelo propio, Municipalidad, PEMSS?)</span></figcaption>
+      </figure>
+      <figure>
+        <div class="frame"><img src="img/rn2_section.jpg" alt="Proposed typical cross-section with sidewalks, bike lanes, trees and four 3.25 m lanes" loading="lazy"></div>
+        <figcaption><b>Typical section, 24.0 m.</b> 2.5 m sidewalk · 0.5 m tree pit · 2.0 m bike lane · 2 × 3.25 m lanes per direction · 0.50 m median.</figcaption>
+      </figure>
+      <figure>
+        <div class="frame"><img src="img/rn2_overview.jpg" alt="Overview of the corridor divided into five design sections" loading="lazy"></div>
+        <figcaption><b>Corridor overview.</b> The 1.5 km study stretch split into five design sections; Section 05 ends in the roundabout that absorbs the left turns and U-turns removed elsewhere.</figcaption>
+      </figure>
+    </div>
+    <p class="note-block"><span class="idea">tienes el video explicativo del TFM (VideoExplicativo_TFM.mp4, 47 MB). Un clip de 20–30 s, o 2–3 capturas de la simulación en SUMO, mostraría el análisis de tráfico, que hoy solo se describe en texto. Si me pasas el clip recortado (menos de 15 MB) lo integro aquí.</span></p>
+  </div>
+</article>
+
+<!-- ================= 02 K206 ================= -->
+<article class="project" id="k206" aria-labelledby="k206-t">
+  <div class="p-hero" style="background-image:url('img/k206_built_crop.jpg')">
+    <div class="wrap"><div class="idx">PROJECT 02</div><h2 id="k206-t">K206 Roundabout Detour</h2></div>
+  </div>
+  <div class="wrap">
+    <div class="crumbs"><span>Transportation | Roads</span><span>Intersections</span><span>Pedestrians &amp; transit</span><span class="here">Area 03, Bildøy · Rv. 555 Sotrasambandet</span></div>
+    <div class="pn"><a href="#rn2">Previous</a><a href="#sto">Next</a></div>
+    <div class="grid-3">
+      <div class="prose">
+        <p class="lead">A temporary roundabout and three connecting roads that cleared the site of the K206 grade separation while cars, buses and people on foot kept moving.</p>
+        <p>For Phase 2, construction needed the whole area around the K206 grade separation free. Rv. 555 allows no left-turning junctions along its length, so the detour joins the local roads through a roundabout. I set the roundabout and its three approaches (alignments A, B and C) to follow the levels and alignment of the permanent roads they meet wherever the geometry allowed, so that the material placed for the detour serves the final works and the volume of fill stays low.</p>
+        <p>The detour also had to work for public transport and pedestrians: a U-turn for buses at the end of one arm, a bus stop on another, sidewalks on the streets that needed them and safe crossing points laid out following Statens vegvesen handbook V127, <i>Kryssingssteder for gående</i> (crossing points for pedestrians).</p>
+        <p>It was one of the most demanding detours on the project. We developed and compared several layouts with Construction, Traffic and Temporary Works before finding one that served pedestrians, buses and private cars at the same time. The fifth version of the design, issued in January 2026, is the one on the ground today. <span class="todo">confirmar que V05 fue la versión construida y la fecha de apertura</span></p>
+      </div>
+      <aside class="facts on-dark" aria-label="Project facts">
+        <dl>
+          <div><dt>Location</dt><dd>Skjergardsvegen, Bildøy, Øygarden (Area 03)</dd></div>
+          <div><dt>Client</dt><dd>Statens vegvesen (NPRA)<small>PPP · design &amp; build contractor: Sotra Link Construction JV</small></dd></div>
+          <div><dt>Role</dt><dd>Road designer and coordinator with Construction, Traffic and Temporary Works <span class="todo">confirmar</span></dd></div>
+          <div><dt>Tools</dt><dd>Civil 3D (alignments, profiles, corridors, grading) · drone orthophotos</dd></div>
+          <div><dt>Standards</dt><dd>Håndbok N100 · V127 Kryssingssteder for gående</dd></div>
+          <div><dt>Status</dt><dd>Design V05, January 2026 · built</dd></div>
+        </dl>
+      </aside>
+    </div>
+
+    <div class="figs">
+      <div class="fig"><b>V05</b><span>fifth design iteration, the one built</span></div>
+      <div class="fig"><b>≈ 860 m</b><span>of new alignment in A, B and C, tied into permanent road levels</span></div>
+      <div class="fig"><b>3</b><span>user groups designed for: pedestrians, buses and private cars</span></div>
+    </div>
+
+    <div class="gallery">
+      <figure class="wide">
+        <div class="ba" id="ba2" style="aspect-ratio:1800/1295">
+          <img src="img/k206_design.jpg" alt="Detour design drawn over the orthophoto taken before construction" loading="lazy">
+          <img class="after" src="img/k206_built.jpg" alt="Drone orthophoto of the detour after construction" loading="lazy">
+          <span class="line"></span><span class="knob" aria-hidden="true">⇆</span>
+          <span class="tag l">Design V05</span><span class="tag r">As built</span>
+          <input type="range" min="0" max="100" value="50" aria-label="Compare the detour design with the built detour">
+        </div>
+        <figcaption><b>From drawing to road.</b> Drag to compare the January 2026 design, drawn over the pre-construction orthophoto, with a drone orthophoto of the same frame after the detour opened.</figcaption>
+      </figure>
+      <figure>
+        <div class="frame"><img src="img/k206_design_zoom.jpg" alt="Close-up of the roundabout and arm B with sidewalk and bus turning loop" loading="lazy"></div>
+        <figcaption><b>Roundabout and arm B.</b> Splitter islands, a sidewalk along arm B (pink) and the turning loop at its south end. <span class="todo">confirmar que el lazo es el U-turn de buses y dónde está la parada</span></figcaption>
+      </figure>
+      <figure>
+        <div class="frame"><img src="img/k206_3d_rbt.jpg" alt="3D corridor model of the roundabout over the terrain mesh" loading="lazy"></div>
+        <figcaption><b>Civil 3D corridor model.</b> Roundabout and approaches over the terrain surface, with cut and fill slopes daylighting to existing ground.</figcaption>
+        <div class="frame" style="margin-top:12px"><img src="img/k206_3d.jpg" alt="3D overview of the whole detour" loading="lazy"></div>
+        <figcaption><b>Whole detour in 3D.</b> Alignment A on the left, the roundabout, and alignment B winding down to the bus turning loop.</figcaption>
+      </figure>
+      <figure class="wide">
+        <div class="profiles two"><div class="p-wide"><div class="prof-label">Alignment A<span>≈ 446 m</span></div><div class="prof zoomable" role="button" tabindex="0" data-src="img/prof_k206.svg" data-w="1684" data-h="1191" data-crop="149,115,1351,479" data-title="K206 · Longitudinal profile, alignment A" aria-label="Open K206 · Longitudinal profile, alignment A in full detail"><div class="prof-crop" style="aspect-ratio:1351/479"><img src="img/prof_k206.svg" alt="Longitudinal profile, Alignment A" loading="lazy" style="width:124.648%;left:-11.029%;top:-24.008%"></div><span class="zoom-hint">⤢ Zoom</span></div></div><div class="p-item"><div class="prof-label">Alignment B<span>≈ 235 m</span></div><div class="prof zoomable" role="button" tabindex="0" data-src="img/prof_k206.svg" data-w="1684" data-h="1191" data-crop="142,708,755,332" data-title="K206 · Longitudinal profile, alignment B" aria-label="Open K206 · Longitudinal profile, alignment B in full detail"><div class="prof-crop" style="aspect-ratio:755/332"><img src="img/prof_k206.svg" alt="Longitudinal profile, Alignment B" loading="lazy" style="width:223.046%;left:-18.808%;top:-213.253%"></div><span class="zoom-hint">⤢ Zoom</span></div></div><div class="p-item"><div class="prof-label">Alignment C<span>≈ 178 m</span></div><div class="prof zoomable" role="button" tabindex="0" data-src="img/prof_k206.svg" data-w="1684" data-h="1191" data-crop="927,630,586,402" data-title="K206 · Longitudinal profile, alignment C" aria-label="Open K206 · Longitudinal profile, alignment C in full detail"><div class="prof-crop" style="aspect-ratio:586/402"><img src="img/prof_k206.svg" alt="Longitudinal profile, Alignment C" loading="lazy" style="width:287.372%;left:-158.191%;top:-156.716%"></div><span class="zoom-hint">⤢ Zoom</span></div></div></div>
+        <figcaption><b>Longitudinal profiles, vector from the Civil 3D sheet.</b> Grade lines, vertical curve radii, crossfall bands and chainage tables. Select any profile to open it full screen and zoom into the labels.</figcaption>
+      </figure>
+    </div>
+    <p class="note-block"><span class="idea">la historia más fuerte de este proyecto son las opciones descartadas. Una tira con 2–3 versiones anteriores (V01–V04) y una línea sobre por qué no funcionaron mostraría tu coordinación con Construcción, Tráfico y Trabajos Temporales. Suma también una foto a nivel de calle con un bus usando el U-turn y, si lo tienes, cuántos m³ de relleno se ahorraron al seguir los niveles permanentes.</span></p>
+  </div>
+</article>
+
+<!-- ================= 03 STORAVATNET ================= -->
+<article class="project" id="sto" aria-labelledby="sto-t">
+  <div class="p-hero" style="background-image:url('img/t5_3d_a.jpg');background-position:center 60%">
+    <div class="wrap"><div class="idx">PROJECT 03</div><h2 id="sto-t">Storavatnet Temporary Roundabout</h2></div>
+  </div>
+  <div class="wrap">
+    <div class="crumbs"><span>Transportation | Roads</span><span>Intersections</span><span>Construction phasing</span><span class="here">Area 11, Storavatnet · Rv. 555 Sotrasambandet</span></div>
+    <div class="pn"><a href="#k206">Previous</a><a href="#kip">Next</a></div>
+    <div class="grid-3">
+      <div class="prose">
+        <p class="lead">A two-phase temporary roundabout at one of the busiest junctions in Norway, designed so that each phase change and each fix to the existing road could be done in a few nights.</p>
+        <p>At Storavatnet the project has to build two new bridges parallel to the existing main road, demolish and rebuild an underpass beneath it and put up a new retaining wall. That closes the link that ran under the road, so traffic from the north and from the west needed a new connection. I designed a temporary roundabout to carry all of it, with five new alignments: A, B, C1, C2 and Ramp AB.</p>
+        <p>The layout had to avoid rock blasting east of the roundabout, tie into the existing ramp between the two roundabouts to the north, keep the north–east ramp open, follow existing road levels so the temporary road is quick to build, separate opposing lanes physically, and give the bypass curves suitable speeds without clashing with the excavation for the new underpass.</p>
+        <p><b>Two phases, one night to switch.</b> The retaining wall is built in five sections over two phases, so the detour has two phases as well. Phase 1 can stay at the level of the existing road. Phase 2 has to pass over the finished part of the wall, clear the Phase 2 excavation and the underpass under construction, and still meet Phase 1 exactly, so the switch can be made in a single night. Getting there meant using the lowest superelevation the standard allows on the curves while staying safe, and a lot of work on the levels.</p>
+        <p><b>A curve that leaned the wrong way.</b> The ramp and the east approach turn right over a carriageway with a −5 % crossfall: adverse superelevation for those curves, and not acceptable with winter coming. The Traffic department asked for it to be corrected under a short night diversion. I tightened the transition within the Norwegian standard until the new surface met the old one cleanly. Most of the tie-in changes by 4 cm or less and can be paved in one asphalt layer while it stays open; the deeper excavation is kept clear of the ramps, so the correction fits in three nights.</p>
+      </div>
+      <aside class="facts on-dark" aria-label="Project facts">
+        <dl>
+          <div><dt>Location</dt><dd>Storavatnet, Bergen (Area 11)</dd></div>
+          <div><dt>Client</dt><dd>Statens vegvesen (NPRA)<small>PPP · design &amp; build contractor: Sotra Link Construction JV</small></dd></div>
+          <div><dt>Road</dt><dd>Temporary road 541104</dd></div>
+          <div><dt>Role</dt><dd>Road designer; coordination with Traffic, Construction and Temporary Works <span class="todo">confirmar</span></dd></div>
+          <div><dt>Tools</dt><dd>Civil 3D (corridors, superelevation, surface comparison) · Navisworks · IFC · photogrammetric 3D mesh</dd></div>
+          <div><dt>Standard</dt><dd>Håndbok N100</dd></div>
+          <div><dt>Status</dt><dd>Phase 1 design, version 06, October 2026 <span class="todo">¿fase 1 ya construida? ¿se ejecutó la corrección en las 3 noches?</span></dd></div>
+        </dl>
+      </aside>
+    </div>
+
+    <div class="figs">
+      <div class="fig"><b>≈ 850 m</b><span>of new alignment: A, B, C1, C2 and Ramp AB</span></div>
+      <div class="fig"><b>1 night</b><span>to switch from Phase 1 to Phase 2</span></div>
+      <div class="fig"><b>−5 %</b><span>adverse crossfall corrected on the ramp and east approach</span></div>
+      <div class="fig"><b>≤ 4 cm</b><span>level change over most of the tie-in, paved under traffic</span></div>
+    </div>
+    <div class="qty"><span>IFC model take-off:</span><span>Wearing course <b>8,607 m²</b></span><span>Base course <b>1,768 m³</b></span><span>Sub-base <b>2,709 m³</b></span><span>Soil cut <b>2,392 m³</b></span><span>Rock cut <b>765 m³</b></span><span>Blasted-rock fill <b>7,451 m³</b></span><span class="todo">cantidades del modelo IFC de agosto 2026: confirmar si siguen válidas para la V06</span></div>
+
+    <div class="gallery">
+      <figure class="wide">
+        <div class="frame zoomable" role="button" tabindex="0" data-src="img/t5_design_hd.jpg" data-w="3600" data-h="2590" data-title="Storavatnet · Phase 1 design, version 06" aria-label="Open the Phase 1 design in full detail"><img src="img/t5_design.jpg" alt="Phase 1 design of the temporary roundabout over the drone orthophoto" loading="lazy"><span class="zoom-hint">⤢ Zoom</span></div>
+        <figcaption><b>Phase 1 design, version 06 (October 2026).</b> The temporary roundabout and its five alignments drawn over the drone orthophoto of the junction. Select to zoom.</figcaption>
+      </figure>
+      <figure>
+        <div class="frame"><img src="img/t5_context.jpg" alt="Aerial view marking the closed link, the underpass and the retaining wall" loading="lazy"></div>
+        <figcaption><b>Why a detour.</b> The underpass to demolish and rebuild (red) and the retaining wall (green) close the link that ran under the main road (orange).</figcaption>
+      </figure>
+      <figure>
+        <div class="frame"><img src="img/t5_concept.jpg" alt="Proposed roundabout layout with the wall sections and underpass excavation" loading="lazy"></div>
+        <figcaption><b>The proposed layout.</b> One roundabout takes the traffic from the north and from the west, routed around the wall sections and the underpass excavation.</figcaption>
+      </figure>
+      <figure>
+        <div class="frame"><img src="img/t5_wall.jpg" alt="Retaining wall sections coloured by construction phase" loading="lazy"></div>
+        <figcaption><b>Retaining wall in five sections.</b> Built in two phases; the Phase 2 detour has to cross over the sections already finished.</figcaption>
+      </figure>
+      <figure>
+        <div class="frame"><img src="img/t5_diversion.jpg" alt="Night diversion routes in blue and red around the area being corrected" loading="lazy"></div>
+        <figcaption><b>Night diversion.</b> Traffic runs on the blue and red routes while the crossfall in the orange area is corrected.</figcaption>
+      </figure>
+      <figure class="wide">
+        <div class="frame"><img src="img/t5_heatmap.jpg" alt="Heat map of level differences between the new and existing surfaces" loading="lazy"></div>
+        <figcaption><b>Level-change map of the tie-in.</b> Light green and yellow change by 4 cm or less and can be paved in one night under traffic; orange and red mark the excavation, kept clear of the ramps.</figcaption>
+      </figure>
+      <figure>
+        <div class="frame"><img src="img/t5_design_zoom.jpg" alt="Close-up of the roundabout with curve radii labelled on each approach" loading="lazy"></div>
+        <figcaption><b>Roundabout detail.</b> Curve radii labelled on every approach, splitter islands and the tie-ins to the existing roundabout to the north.</figcaption>
+      </figure>
+      <figure>
+        <div class="frame"><img src="img/t5_3d_b.jpg" alt="3D corridor model of the roundabout on the photogrammetric mesh" loading="lazy"></div>
+        <figcaption><b>Civil 3D model on the photogrammetric mesh.</b> Roundabout, bypass and ramps with their cut and fill slopes, checked against the real terrain.</figcaption>
+        <div class="frame" style="margin-top:12px"><img src="img/t5_phase1.jpg" alt="Phase 1 solution over the orthophoto" loading="lazy"></div>
+        <figcaption><b>Phase 1 solution</b> as set out on the orthophoto.</figcaption>
+      </figure>
+      <figure class="wide">
+        <div class="profiles"><div class="p-wide"><div class="prof-label">Alignment A<span>≈ 310 m</span></div><div class="prof zoomable" role="button" tabindex="0" data-src="img/prof_541104.svg" data-w="1684" data-h="1191" data-crop="110,96,954,465" data-title="Storavatnet · Longitudinal profile, alignment A" aria-label="Open Storavatnet · Longitudinal profile, alignment A in full detail"><div class="prof-crop" style="aspect-ratio:954/465"><img src="img/prof_541104.svg" alt="Longitudinal profile, Alignment A" loading="lazy" style="width:176.520%;left:-11.530%;top:-20.645%"></div><span class="zoom-hint">⤢ Zoom</span></div></div><div class="p-wide"><div class="prof-label">Ramp AB<span>≈ 225 m</span></div><div class="prof zoomable" role="button" tabindex="0" data-src="img/prof_541104.svg" data-w="1684" data-h="1191" data-crop="819,589,712,458" data-title="Storavatnet · Longitudinal profile, ramp AB" aria-label="Open Storavatnet · Longitudinal profile, ramp AB in full detail"><div class="prof-crop" style="aspect-ratio:712/458"><img src="img/prof_541104.svg" alt="Longitudinal profile, Ramp AB" loading="lazy" style="width:236.517%;left:-115.028%;top:-128.603%"></div><span class="zoom-hint">⤢ Zoom</span></div></div><div class="p-item"><div class="prof-label">Alignment B<span>≈ 125 m</span></div><div class="prof zoomable" role="button" tabindex="0" data-src="img/prof_541104.svg" data-w="1684" data-h="1191" data-crop="1098,102,429,459" data-title="Storavatnet · Longitudinal profile, alignment B" aria-label="Open Storavatnet · Longitudinal profile, alignment B in full detail"><div class="prof-crop" style="aspect-ratio:429/459"><img src="img/prof_541104.svg" alt="Longitudinal profile, Alignment B" loading="lazy" style="width:392.541%;left:-255.944%;top:-22.222%"></div><span class="zoom-hint">⤢ Zoom</span></div></div><div class="p-item"><div class="prof-label">Alignment C1<span>≈ 75 m</span></div><div class="prof zoomable" role="button" tabindex="0" data-src="img/prof_541104.svg" data-w="1684" data-h="1191" data-crop="110,588,288,459" data-title="Storavatnet · Longitudinal profile, alignment C1" aria-label="Open Storavatnet · Longitudinal profile, alignment C1 in full detail"><div class="prof-crop" style="aspect-ratio:288/459"><img src="img/prof_541104.svg" alt="Longitudinal profile, Alignment C1" loading="lazy" style="width:584.722%;left:-38.194%;top:-128.105%"></div><span class="zoom-hint">⤢ Zoom</span></div></div><div class="p-item"><div class="prof-label">Alignment C2<span>≈ 110 m</span></div><div class="prof zoomable" role="button" tabindex="0" data-src="img/prof_541104.svg" data-w="1684" data-h="1191" data-crop="426,589,387,458" data-title="Storavatnet · Longitudinal profile, alignment C2" aria-label="Open Storavatnet · Longitudinal profile, alignment C2 in full detail"><div class="prof-crop" style="aspect-ratio:387/458"><img src="img/prof_541104.svg" alt="Longitudinal profile, Alignment C2" loading="lazy" style="width:435.142%;left:-110.078%;top:-128.603%"></div><span class="zoom-hint">⤢ Zoom</span></div></div></div>
+        <figcaption><b>Longitudinal profiles, version 06.</b> Vector from the Civil 3D sheet, so every label stays sharp: grade lines over existing ground, vertical curve radii, horizontal curves and the crossfall band (TVERRFALL) where the superelevation was worked out. Select a profile to zoom.</figcaption>
+      </figure>
+    </div>
+    <p class="note-block"><span class="idea">la corrección del peralte es lo más técnico del portafolio y lo que más te diferencia. Una sección transversal antes/después (−5 % existente frente al peralte corregido, con la dirección de la curva) la haría entendible para alguien que no es vial en 5 segundos; si me das el peralte final y la velocidad de diseño, la dibujo. También suma una foto de la noche del cambio de fase y el tráfico diario del cruce (vehículos/día) para respaldar con un número que es uno de los más transitados de Noruega.</span></p>
+  </div>
+</article>
+
+<!-- ================= 04 KIPLEVATNET ================= -->
+<article class="project" id="kip" aria-labelledby="kip-t">
+  <div class="p-hero" style="background-image:url('img/kip_zoom.jpg');background-position:center 45%">
+    <div class="wrap"><div class="idx">PROJECT 04</div><h2 id="kip-t">Kiplevatnet Grouting Platform</h2></div>
+  </div>
+  <div class="wrap">
+    <div class="crumbs"><span>Site grading &amp; earthworks</span><span>Drainage</span><span>Temporary works</span><span class="here">Area 09, Drotningsvik · Rv. 555 Sotrasambandet</span></div>
+    <div class="pn"><a href="#sto">Previous</a><a href="#a03">Next</a></div>
+    <div class="grid-3">
+      <div class="prose">
+        <p class="lead">A work platform for grouting the rock above a shallow tunnel, fitted between a road that had to stay open, buried storm-water pipes and a lake.</p>
+        <p>A tunnel under construction passed close to the surface at Kiplevatnet, so the rock mass above it had to be strengthened by grouting before the tunnel face reached that point. Construction needed a level platform for the drilling and grouting rigs and a separate plant area for the workshop, water tank, mixer, pump and silo slab.</p>
+        <p>The constraints set the geometry. The adjacent road had to stay open at its existing level for the whole operation, so the platform ties into it without changing its grade. Two lagoons, 294 m² and 136 m² with their bottom at +41.88, give at least 400 m³ of retention. Two Ø500 mm storm-water pipes run directly underneath, so every level keeps at least 80 cm of cover over them, with a Ø1500 mm, 3.5 m deep manhole on the line next to the plant area.</p>
+        <p>I graded the platform in Civil 3D against the existing terrain and the bedrock surface, keeping the earthworks small and entirely in soil: 714 m³ of excavation, 601 m³ of fill and no rock excavation. The plan, sections and IFC models of the platform, pipes and manhole were issued in March 2024.</p>
+      </div>
+      <aside class="facts on-dark" aria-label="Project facts">
+        <dl>
+          <div><dt>Location</dt><dd>Kiplevatnet, Drotningsvik (Area 09), Bergen</dd></div>
+          <div><dt>Client</dt><dd>Sotra Link Construction JV, Temporary Works request 061</dd></div>
+          <div><dt>Drawing</dt><dd>SB-SL-09-B-TGH-00061 · Phase 1</dd></div>
+          <div><dt>Role</dt><dd>Designer: grading, drainage, quantities, drawings and IFC</dd></div>
+          <div><dt>Tools</dt><dd>Civil 3D · IFC · drone orthophoto</dd></div>
+          <div><dt>Status</dt><dd>Issued March 2024 <span class="todo">¿se construyó tal cual? nombre del túnel</span></dd></div>
+        </dl>
+      </aside>
+    </div>
+
+    <div class="figs">
+      <div class="fig"><b>≥ 400 m³</b><span>retention in two lagoons (430 m² in plan)</span></div>
+      <div class="fig"><b>≥ 0.80 m</b><span>cover kept over 2 × Ø500 mm storm-water pipes</span></div>
+      <div class="fig"><b>714 / 601 m³</b><span>cut / fill, no rock excavation</span></div>
+      <div class="fig"><b>±0</b><span>change to the level of the road kept open</span></div>
+    </div>
+
+    <div class="gallery">
+      <figure>
+        <div class="frame"><img src="img/kip_zoom.jpg" alt="Plan of the platform with plant area, two lagoons, working surface and pipes" loading="lazy"></div>
+        <figcaption><b>Plan.</b> Plant area at +44.80 (workshop, H₂O tank, mixer, pump, silo slab), lagoons at +41.88, working surface along the lake, the Ø1500 mm manhole and the two Ø500 mm pipes crossing underneath.</figcaption>
+      </figure>
+      <figure>
+        <div class="frame"><img src="img/kip_section.jpg" alt="Sections 01 and 02 showing existing terrain, bedrock and platform" loading="lazy"></div>
+        <figcaption><b>Sections 01 and 02.</b> Platform (green) against existing terrain (black) and bedrock (brown); the two pipes sit under the platform in Section 01.</figcaption>
+      </figure>
+      <figure class="wide">
+        <div class="frame"><img src="img/kip_3d.jpg" alt="3D model of the platform with plant area, lagoons, working platform and access" loading="lazy"></div>
+        <figcaption><b>3D model.</b> Existing road, plant area, Lagoon 01 and 02, working platform, access ramp and storm-water pipe in the terrain model.</figcaption>
+      </figure>
+    </div>
+    <p class="note-block"><span class="idea">una foto de la plataforma en uso, con los equipos de inyección trabajando, convertiría el plano en obra real. También ayudaría una línea con el cálculo de retención (área × profundidad útil de las lagunas) para mostrar cómo se llega a los 400 m³.</span></p>
+  </div>
+</article>
+
+<!-- ================= 05 AREA 03 ================= -->
+<article class="project" id="a03" aria-labelledby="a03-t">
+  <div class="p-hero" style="background-image:url('img/nova_3d_b.jpg')">
+    <div class="wrap"><div class="idx">PROJECT 05</div><h2 id="a03-t">Rebuilding Roads That Stay in Service</h2></div>
+  </div>
+  <div class="wrap">
+    <div class="crumbs"><span>Transportation | Roads</span><span>Pavement &amp; earthworks</span><span>Client coordination</span><span class="here">Area 03, Bildøy</span></div>
+    <div class="pn"><a href="#kip">Previous</a><a href="#gis">Next</a></div>
+    <div class="grid-3">
+      <div class="prose">
+        <p class="lead">A technical clarification to the Norwegian Public Roads Administration on how to rebuild three roads that remain open and carry permanent utilities.</p>
+        <p>In Area 03 the new alignments of roads 203000, 203100 and 203400 partly overlap roads already in use, some with permanent utilities underneath. Full excavation would have meant relocating services and disturbing pavements that have long since settled. I redesigned the roads in Novapoint and prepared Technical Clarification TA-254, proposing to keep structurally sound existing pavement, absorb level differences inside the new layer package, build the longitudinal and transverse transitions to the project's Design Basis (plan F003) and re-lay the full wearing course.</p>
+        <p>Where deep blasting is required, a drain pipe at the lowest point of the excavation keeps the lower layers dry, following Håndbok N200 §1.3.4.2. NPRA asked for an overview of where existing structure would be kept and where the road is widened or re-profiled, which became Revision 1 of the TA in June 2026. <span class="todo">confirmar tu rol exacto en el TA y la respuesta final de NPRA</span></p>
+        <p>The same 3D-model discipline goes into reviewing other people's work. For a design claim in 2025 I checked the designer's road models at nine critical chainages on eight roads and documented missing soil and deep-blasting layers with cross-section evidence.</p>
+      </div>
+      <aside class="facts on-dark" aria-label="Project facts">
+        <dl>
+          <div><dt>Location</dt><dd>Bildøy, Øygarden, Norway (Area 03)</dd></div>
+          <div><dt>Client</dt><dd>Statens vegvesen (NPRA)</dd></div>
+          <div><dt>Document</dt><dd>TA-254 · SB-SL-TAC-03-RVD-000001</dd></div>
+          <div><dt>Tools</dt><dd>Novapoint · Civil 3D · Navisworks · IFC</dd></div>
+          <div><dt>Standard</dt><dd>Håndbok N200 (2021)</dd></div>
+          <div><dt>Status</dt><dd>Rev. 1, June 2026 <span class="todo">longitud de las 3 vías</span></dd></div>
+        </dl>
+      </aside>
+    </div>
+
+    <div class="gallery">
+      <figure class="wide">
+        <div class="frame"><img src="img/ta_section_existing.jpg" alt="Cross-section with the existing road retained under the new road" loading="lazy"></div>
+        <figcaption><b>Proposed principle.</b> Existing pavement (pink) kept under the widened road, new layers on top, 1:10 and 1:4 side slopes and the deep-blasting zone below.</figcaption>
+      </figure>
+      <figure>
+        <div class="frame"><img src="img/nova_3d_a.jpg" alt="3D road model in Novapoint with chainage labels" loading="lazy"></div>
+        <figcaption><b>Model review.</b> Novapoint model of a reviewed road, with chainages and the cut and fill surfaces checked for the claim.</figcaption>
+      </figure>
+      <figure>
+        <div class="frame"><img src="img/nova_xs.jpg" alt="Cross-section viewer showing terrain, road and missing layers" loading="lazy"></div>
+        <figcaption><b>Cross-section evidence.</b> Terrain, road surface and formation at one of the reviewed chainages.</figcaption>
+      </figure>
+    </div>
+    <p class="note-block"><span class="idea">una vista en planta de las tres vías marcando en colores "se conserva / se ensancha / se reperfila" (lo que pidió NPRA para la Rev. 1) haría el proyecto entendible en 5 segundos. Si me compartes la carpeta de la Rev. 1, la preparo.</span></p>
+  </div>
+</article>
+
+<!-- ================= 06 GIS ================= -->
+<article class="project" id="gis" aria-labelledby="gis-t">
+  <div class="p-hero" style="background-image:url('img/sotra_phases_a.jpg')">
+    <div class="wrap"><div class="idx">PROJECT 06</div><h2 id="gis-t">GIS &amp; BIM for 245 Road Models</h2></div>
+  </div>
+  <div class="wrap">
+    <div class="crumbs"><span>Infrastructure &amp; planning</span><span>GIS</span><span>BIM coordination</span><span class="here">Rv. 555, 11 construction areas</span></div>
+    <div class="pn"><a href="#a03">Previous</a><a href="#profile">Profile</a></div>
+    <div class="grid-3">
+      <div class="prose">
+        <p class="lead">Turning hundreds of separate road models into maps and coordination models that owners, planners and site teams can use.</p>
+        <p>The road network on Sotrasambandet is delivered as roughly 250 road models across eleven construction areas, from the main highway to footpaths, roundabouts and private accesses. The future owners, from the state and Vestland County to the municipalities and private landowners, need to know what they will receive, and site teams need to know what gets built in each phase.</p>
+        <p>I built a GIS layer of every road as polygons, classified by road type, owner and construction phase (1A, 1B, 2A, 2B), converting CAD hatches into GIS polygons with my own AutoLISP routine and publishing them as shapefiles and a QGIS project. For Vestland County I assembled Navisworks coordination models per area, combining the road models with terrain surfaces clipped to the project limits. A Dynamo script extracts start and end chainages for all alignments, about 57 km of road axes, for planning and quantities.</p>
+        <p><span class="todo">para qué se usó (entrega a propietarios, permisos Bergen kommune…) y quién lo usa hoy</span></p>
+      </div>
+      <aside class="facts on-dark" aria-label="Project facts">
+        <dl>
+          <div><dt>Location</dt><dd>Rv. 555, Bergen &amp; Øygarden</dd></div>
+          <div><dt>Users</dt><dd>NPRA · Vestland County · site and planning teams</dd></div>
+          <div><dt>Tools</dt><dd>QGIS · Civil 3D · AutoLISP · Dynamo · Navisworks · IFC / LandXML</dd></div>
+          <div><dt>Status</dt><dd>2024 – 2026</dd></div>
+        </dl>
+      </aside>
+    </div>
+
+    <div class="chart" style="margin-top:clamp(28px,4vw,44px)">
+      <h4>245 road models by future owner</h4>
+      <p>Road-type classification of every road IFC model, May 2026.</p>
+      <div class="owners" role="img" aria-label="National 88, County 71, Private 34, Municipal 29, Other or mixed 23">
+        <div style="width:35.9%;background:var(--red)"></div>
+        <div style="width:29.0%;background:var(--ink)"></div>
+        <div style="width:13.9%;background:var(--chart-2)"></div>
+        <div style="width:11.8%;background:var(--chart-3)"></div>
+        <div style="width:9.4%;background:var(--chart-4)"></div>
+      </div>
+      <div class="owner-key">
+        <div><i style="background:var(--red)"></i>National roads<b>88</b></div>
+        <div><i style="background:var(--ink)"></i>County roads<b>71</b></div>
+        <div><i style="background:var(--chart-2)"></i>Private roads<b>34</b></div>
+        <div><i style="background:var(--chart-3)"></i>Municipal roads<b>29</b></div>
+        <div><i style="background:var(--chart-4)"></i>Other / mixed<b>23</b></div>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <figure>
+        <div class="frame"><img src="img/sotra_phases_a.jpg" alt="Roads coloured by construction phase, west section" loading="lazy"></div>
+        <figcaption><b>Roads by construction phase, sheet 1 of 6.</b> Phases 1A, 1B, 2A and 2B over the base map.</figcaption>
+      </figure>
+      <figure>
+        <div class="frame"><img src="img/sotra_phases_c.jpg" alt="Roads coloured by construction phase, central interchange" loading="lazy"></div>
+        <figcaption><b>Sheet 3 of 6.</b> Interchange area, where several owners and phases meet.</figcaption>
+      </figure>
+    </div>
+    <p class="note-block"><span class="idea">estos planos salen de AutoCAD con fondo gris y se ven técnicos. Puedo generar un mapa más limpio directamente desde tu proyecto QGIS (Project_GIS_Layers.qgz), coloreado por propietario y con ortofoto de fondo, usando el conector de QGIS de tu computadora.</span></p>
+  </div>
+</article>
+
+<!-- ================= PROFILE ================= -->
+<section id="profile" style="background:var(--panel)">
+  <div class="wrap">
+    <h2 class="sec-title">Profile</h2>
+    <div class="grid-3">
+      <div class="prose">
+        <p class="lead">Day to day, as Discipline Leader for Roads, I review and direct the work of three designers and own the road discipline's paperwork with site and client.</p>
+        <p>That means field change requests, work inspection requests and geometric controls in Dalux, F-issues, RFIs and technical clarifications with NPRA, the review of the roads bill of quantities, and Python and Dynamo tools that take quantities straight from the models. Most of it comes down to the same question: does what is drawn match what can be built, and what the contract says?</p>
+        <p><span class="todo">cifras: nº de FCR, WIR, RFI y TA gestionados desde dic. 2025</span> <span class="idea">una foto profesional aquí o en la portada.</span></p>
+      </div>
+      <aside class="facts on-dark" aria-label="Software">
+        <dl>
+          <div><dt>Design</dt><dd>Civil 3D · Novapoint / Quadri · Revit <span class="todo">¿InfraWorks, HEC-RAS, HEC-HMS o PCSWMM?</span></dd></div>
+          <div><dt>Coordination</dt><dd>Navisworks · IFC · LandXML · ACC · Aconex · Dalux</dd></div>
+          <div><dt>GIS &amp; code</dt><dd>QGIS · Python · Dynamo · AutoLISP</dd></div>
+          <div><dt>Traffic</dt><dd>SUMO</dd></div>
+        </dl>
+      </aside>
+    </div>
+
+    <div class="timeline">
+      <div class="tl"><div class="when">Dec 2025 – now</div><div><h3>Discipline Leader, Roads · Sotra Link Construction JV</h3><p>Bergen, Norway. Leads a team of three road designers; FCRs, WIRs, F-issues, RFIs and TAs; BOQ review.</p></div></div>
+      <div class="tl"><div class="when">Sep 2024 – Dec 2025</div><div><h3>Project Engineer, Roads · Sotra Link Construction JV</h3><p>Detours and temporary roads with Temporary Works; BIM/GIS coordination; quantity automation.</p></div></div>
+      <div class="tl"><div class="when">Jul 2023 – Sep 2024</div><div><h3>BIM Engineer · Sotra Link Construction JV</h3><p>Temporary platforms and accesses, structural details, models and drawings.</p></div></div>
+      <div class="tl"><div class="when">Nov 2022 – Jul 2023</div><div><h3>BIM Modeler · Tetris / IDOM</h3><p>Madrid, Spain. Utilities (MEP) scope lead, structural modelling and digital twins.</p></div></div>
+      <div class="tl"><div class="when">2016 – 2025</div><div><h3>Education</h3><p>Licentiate in Construction Engineering, Instituto Tecnológico de Costa Rica (2022) · MSc BIM, IDESIE Business School (2023) · MSc Smart Mobility, Structuralia / Universidad Isabel I (2025).</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact on-dark" id="contact">
+  <div class="wrap">
+    <h2 class="sec-title">Contact</h2>
+    <div class="contact-grid">
+      <dl><dt>Email</dt><dd>bryandej29@gmail.com</dd></dl>
+      <dl><dt>Phone</dt><dd>+506 8460 0068<br>+47 413 22 039</dd></dl>
+      <dl><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/bryan-naranjo-a7748a211" style="color:var(--on-dark)">linkedin.com/in/bryan-naranjo-a7748a211</a></dd></dl>
+    </div>
+    <div class="foot">
+      <span><b>Bryan Naranjo Hernández</b> · Portfolio 2026</span>
+      <span>Sotrasambandet drawings and models are shown as examples of my own work on the project. <span class="todo">autorización de Sotra Link / Webuild para mostrar estos planos</span></span>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var btn=document.getElementById('notesToggle');
+  btn.addEventListener('click',function(){
+    var hidden=document.body.classList.toggle('hide-notes');
+    btn.textContent=hidden?'Mostrar notas':'Ocultar notas';
+    btn.setAttribute('aria-pressed',hidden?'true':'false');
+  });
+  /* drawing viewer: vector profiles and high-res plans */
+  var lb=document.getElementById('lb'), stage=document.getElementById('lbStage'), im=document.getElementById('lbImg'), ttl=document.getElementById('lbTitle');
+  var st={s:1,tx:0,ty:0,w:1,h:1,min:.1,max:8,crop:null}, opener=null, ptrs={}, last=null, pinch=null;
+  function apply(){im.style.width=(st.w*st.s)+'px';im.style.height=(st.h*st.s)+'px';im.style.left=st.tx+'px';im.style.top=st.ty+'px';}
+  function fit(c){var r=stage.getBoundingClientRect();c=c||[0,0,st.w,st.h];
+    st.s=Math.min(r.width/c[2],r.height/c[3])*.95; st.tx=(r.width-c[2]*st.s)/2-c[0]*st.s; st.ty=(r.height-c[3]*st.s)/2-c[1]*st.s; apply();}
+  function zoomAt(f,px,py){var ns=Math.max(st.min,Math.min(st.max,st.s*f));f=ns/st.s;st.tx=px-(px-st.tx)*f;st.ty=py-(py-st.ty)*f;st.s=ns;apply();}
+  function center(){var r=stage.getBoundingClientRect();return [r.width/2,r.height/2];}
+  function open(el){opener=el; st.w=+el.dataset.w; st.h=+el.dataset.h; st.crop=el.dataset.crop?el.dataset.crop.split(',').map(Number):null;
+    var vec=/\.svg$/i.test(el.dataset.src); im.src=el.dataset.src; im.alt=el.getAttribute('aria-label')||''; ttl.textContent=el.dataset.title||'Drawing';
+    lb.hidden=false; document.body.style.overflow='hidden';
+    var r=stage.getBoundingClientRect(); var whole=Math.min(r.width/st.w,r.height/st.h);
+    st.min=whole*.6; st.max=vec?Math.max(14000/st.w,whole*4):Math.max(2.2,whole*2);
+    fit(st.crop); document.getElementById('lbClose').focus();}
+  function close(){lb.hidden=true; document.body.style.overflow=''; im.removeAttribute('src'); if(opener) opener.focus();}
+  document.querySelectorAll('.zoomable').forEach(function(el){
+    el.addEventListener('click',function(){open(el);});
+    el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(el);}});
+  });
+  lb.querySelector('.lb-tools').addEventListener('click',function(e){var a=e.target.closest('button');if(!a)return;var c=center();
+    if(a.dataset.act==='in')zoomAt(1.5,c[0],c[1]); else if(a.dataset.act==='out')zoomAt(1/1.5,c[0],c[1]); else if(a.dataset.act==='fit')fit(st.crop); else close();});
+  document.addEventListener('keydown',function(e){if(lb.hidden)return;var c=center();
+    if(e.key==='Escape')close(); else if(e.key==='+'||e.key==='=')zoomAt(1.5,c[0],c[1]); else if(e.key==='-')zoomAt(1/1.5,c[0],c[1]);});
+  stage.addEventListener('wheel',function(e){e.preventDefault();var r=stage.getBoundingClientRect();zoomAt(Math.exp(-e.deltaY*.0015),e.clientX-r.left,e.clientY-r.top);},{passive:false});
+  stage.addEventListener('dblclick',function(e){var r=stage.getBoundingClientRect();zoomAt(2,e.clientX-r.left,e.clientY-r.top);});
+  stage.addEventListener('pointerdown',function(e){stage.setPointerCapture(e.pointerId);ptrs[e.pointerId]=[e.clientX,e.clientY];stage.classList.add('dragging');});
+  stage.addEventListener('pointermove',function(e){if(!ptrs[e.pointerId])return;var prev=ptrs[e.pointerId];ptrs[e.pointerId]=[e.clientX,e.clientY];var ids=Object.keys(ptrs);
+    if(ids.length===1){st.tx+=e.clientX-prev[0];st.ty+=e.clientY-prev[1];apply();}
+    else if(ids.length===2){var a=ptrs[ids[0]],b=ptrs[ids[1]];var d=Math.hypot(a[0]-b[0],a[1]-b[1]);var r=stage.getBoundingClientRect();
+      if(pinch)zoomAt(d/pinch,(a[0]+b[0])/2-r.left,(a[1]+b[1])/2-r.top); pinch=d;}});
+  function up(e){delete ptrs[e.pointerId];pinch=null;if(!Object.keys(ptrs).length)stage.classList.remove('dragging');}
+  stage.addEventListener('pointerup',up); stage.addEventListener('pointercancel',up);
+  window.addEventListener('resize',function(){if(!lb.hidden)fit(st.crop);});
+
+  document.querySelectorAll('.ba').forEach(function(ba){
+    var r=ba.querySelector('input');
+    function setPos(){ba.style.setProperty('--pos',r.value+'%');}
+    r.addEventListener('input',setPos); setPos();
+  });
+})();
+</script>
+</body>
+</html>
